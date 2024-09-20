@@ -1,4 +1,4 @@
-# TASKIFY - Task Manager
+# <span style="color:green">TASKIFY - Task Manager</span>
 
 ### Problem:  
 
