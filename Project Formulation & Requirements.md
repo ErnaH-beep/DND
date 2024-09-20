@@ -1,6 +1,4 @@
-# TASKIFY 
-
-## Task Manager 
+# TASKIFY - Task Manager
 
 ### Problem:  
 
