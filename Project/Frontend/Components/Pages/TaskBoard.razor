@@ -1,0 +1,84 @@
+@page "/tasks"
+@inject IHttpClientFactory ClientFactory
+@inject NavigationManager NavigationManager
+@using Shared.Models
+@using Frontend.Components.Components
+
+<h3>Task Board</h3>
+
+<div class="task-board">
+    <div class="task-column">
+        <h4>To Do</h4>
+        @foreach (var task in Tasks.Where(t => t.Status.ToString() == TaskStatus.Todo.ToString()))
+        {
+            <TaskCard Task="task" OnStatusChange="UpdateTaskStatus" />
+        }
+    </div>
+
+    <div class="task-column">
+        <h4>In Progress</h4>
+        @foreach (var task in Tasks.Where(t => t.Status.ToString() == TaskStatus.InProgress.ToString()))
+        {
+            <TaskCard Task="task" OnStatusChange="UpdateTaskStatus" />
+        }
+    </div>
+
+    <div class="task-column">
+        <h4>Done</h4>
+        @foreach (var task in Tasks.Where(t => t.Status.ToString() == TaskStatus.Done.ToString()))
+        {
+            <TaskCard Task="task" OnStatusChange="UpdateTaskStatus" />
+        }
+    </div>
+</div>
+
+<button class="btn btn-primary mb-3" @onclick="async () => await createTaskModal.ShowModal()">
+    <i class="bi bi-plus"></i> Add New Task
+</button>
+<CreateTaskModal @ref="createTaskModal" OnSubmitSuccess="LoadTasks" />
+
+@code {
+    private CreateTaskModal? createTaskModal;
+    private enum TaskStatus
+    {
+        Todo,
+        InProgress,
+        Done
+    }
+    private List<Shared.Models.Task> Tasks = new();
+
+    protected override async System.Threading.Tasks.Task OnInitializedAsync()
+    {
+        var client = ClientFactory.CreateClient("BackendAPI");
+        var tasks = await client.GetFromJsonAsync<List<Shared.Models.Task>>("api/Tasks");
+        if (tasks != null)
+        {
+            Tasks = tasks;
+        }
+    }
+
+    private async System.Threading.Tasks.Task UpdateTaskStatus((Shared.Models.Task Task, string NewStatus) args)
+{
+    var (task, newStatus) = args; // Deconstruct the tuple
+    task.Status = newStatus;
+
+    var client = ClientFactory.CreateClient("BackendAPI");
+    await client.PutAsJsonAsync($"api/Tasks/{task.Id}/status", newStatus);
+    var updatedTasks = await client.GetFromJsonAsync<List<Shared.Models.Task>>("api/Tasks");
+    if (updatedTasks != null)
+    {
+        Tasks = updatedTasks;
+    }
+}
+
+    private async System.Threading.Tasks.Task LoadTasks()
+    {
+        var client = ClientFactory.CreateClient("BackendAPI");
+        var tasks = await client.GetFromJsonAsync<List<Shared.Models.Task>>("api/Tasks");
+        if (tasks != null)
+        {
+            Tasks = tasks;
+            StateHasChanged();
+        }
+    }
+}

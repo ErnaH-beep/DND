@@ -1,0 +1,1013 @@
+@import '_content/Blazor.Bootstrap/Blazor.Bootstrap.bundle.scp.css';
+
+/* _content/Frontend/Components/Components/UserProfileDropdown.razor.rz.scp.css */
+.dropdown .user-profile-btn[b-bsi848zlm0] {
+    border: none; /* Remove border */
+    display: flex; /* Center content */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s ease; /* Smooth color transition */
+    color: black;
+    margin: 0;
+}
+
+.btn-link[b-bsi848zlm0] {
+    margin-left: 1rem;
+}
+
+/* Remove blue outline */
+.user-profile-btn:focus[b-bsi848zlm0] {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Change color on hover */
+.user-profile-btn:hover[b-bsi848zlm0] {
+    color: #4c7c8f; /* Change icon color to white */
+}
+
+.user-profile-btn svg[b-bsi848zlm0] {
+    color: inherit; /* Inherit color from button */
+}
+
+.dropdown-menu .action-button[b-bsi848zlm0] {
+    user-select: none;
+    transition: .3s ease;
+    padding: 8px 12px; 
+    cursor: pointer;
+}
+
+.dropdown-menu .action-button:hover[b-bsi848zlm0] {
+    color: white;
+    background-color: #4c7c8f;
+}
+/* _content/Frontend/Components/Layout/MainLayout.razor.rz.scp.css */
+.page[b-cj3fj28uav] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+main[b-cj3fj28uav] {
+    flex: 1;
+}
+
+.sidebar[b-cj3fj28uav] {
+    background-color: #4c7c8f;
+}
+
+button[b-cj3fj28uav] {
+    border: none;
+    background: transparent;
+    color: #212529;
+    transition: .3s ease;
+}
+
+button:hover[b-cj3fj28uav] {
+    color: #4c7c8f;
+}
+
+.top-row[b-cj3fj28uav] {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #d6d5d5;
+    justify-content: flex-end;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+    .top-row[b-cj3fj28uav]  a, .top-row[b-cj3fj28uav]  .btn-link {
+        white-space: nowrap;
+        margin-left: 1.5rem;
+        text-decoration: none;
+    }
+
+    .top-row[b-cj3fj28uav]  a:hover, .top-row[b-cj3fj28uav]  .btn-link:hover {
+        text-decoration: underline;
+    }
+
+    .top-row[b-cj3fj28uav]  a:first-child {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+.top-row[b-cj3fj28uav]  .add-new {
+    color: white;
+    background: #014a63;
+    border: none;
+    border-radius: 4px;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    line-height: 3rem;
+    width: 100%;
+    padding: 5px 10px;
+    transition: .3s ease;
+    text-decoration: none;
+}
+
+.top-row[b-cj3fj28uav]  .add-new:hover {
+    color: white;
+    background-color: #4c7c8f;
+    text-decoration: none;
+}
+
+.content[b-cj3fj28uav] {
+    padding-bottom: 1.1rem;
+}
+
+@media (max-width: 640.98px) {
+    .top-row[b-cj3fj28uav] {
+        justify-content: space-between;
+    }
+
+    .top-row[b-cj3fj28uav]  a, .top-row[b-cj3fj28uav]  .btn-link {
+        margin-left: 0;
+    }
+
+    .dropdown-list[b-cj3fj28uav] {
+        display: none;
+        position: absolute;
+        background-color: white;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        min-width: 250px;
+        top: 6.5rem;
+        left: 1rem;
+        z-index: 1;
+        padding: 0;
+        border-radius: 8px;
+        margin: 0;
+    }
+}
+
+@media (min-width: 641px) {
+    .page[b-cj3fj28uav] {
+        flex-direction: row;
+    }
+
+    .sidebar[b-cj3fj28uav] {
+        width: 250px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    .top-row[b-cj3fj28uav] {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .top-row.auth[b-cj3fj28uav]  a:first-child {
+        flex: 1;
+        text-align: right;
+        width: 0;
+    }
+
+    .top-row[b-cj3fj28uav], article[b-cj3fj28uav] {
+        padding-left: 2rem !important;
+        padding-right: 1.5rem !important;
+    }
+}
+
+#blazor-error-ui[b-cj3fj28uav] {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss[b-cj3fj28uav] {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
+/* _content/Frontend/Components/Layout/NavMenu.razor.rz.scp.css */
+.navbar-toggler[b-ftcrkoicqg] {
+    appearance: none;
+    cursor: pointer;
+    width: 3.5rem;
+    height: 2.5rem;
+    color: white;
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") no-repeat center/1.75rem rgba(255, 255, 255, 0.1);
+}
+
+.navbar-toggler:checked[b-ftcrkoicqg] {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.top-row[b-ftcrkoicqg] {
+    height: 3.5rem;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.navbar-brand img[b-ftcrkoicqg] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 11.5rem;
+}
+
+.bi[b-ftcrkoicqg] {
+    display: inline-block;
+    position: relative;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.75rem;
+    top: -1px;
+    background-size: cover;
+}
+
+.nav-item[b-ftcrkoicqg] {
+    font-size: 1rem;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+}
+
+    .nav-item:first-of-type[b-ftcrkoicqg] {
+        padding-top: 1rem;
+    }
+
+    .nav-item:last-of-type[b-ftcrkoicqg] {
+        padding-bottom: 1rem;
+    }
+
+    .nav-item[b-ftcrkoicqg]  .nav-link {
+        color: white;
+        background: none;
+        border: none;
+        border-radius: 4px;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        line-height: 3rem;
+        width: 100%;
+        padding: 0 10px;
+    }
+
+.nav-item[b-ftcrkoicqg]  a.active {
+    background-color: #014a63;
+    color: white;
+}
+
+.nav-item[b-ftcrkoicqg]  .nav-link:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+}
+
+.nav-scrollable[b-ftcrkoicqg] {
+    display: none;
+}
+
+.navbar-toggler:checked ~ .nav-scrollable[b-ftcrkoicqg] {
+    display: block;
+}
+
+@media (min-width: 641px) {
+    .navbar-toggler[b-ftcrkoicqg] {
+        display: none;
+    }
+
+    .nav-scrollable[b-ftcrkoicqg] {
+        /* Never collapse the sidebar for wide screens */
+        display: block;
+
+        /* Allow sidebar to scroll for tall menus */
+        height: calc(100vh - 3.5rem);
+        overflow-y: auto;
+    }
+}
+/* _content/Frontend/Components/Modals/EditUserModal.razor.rz.scp.css */
+button[b-1wajpc3zzi] {
+  width: 200px; /* Same width as input fields */
+  background-color: #014a63; /* Button background color */
+  color: white; /* Button text color */
+  padding: 10px; /* Add padding inside the button */
+  border: none; /* Remove default borders */
+  border-radius: 5px; /* Rounded corners for the button */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  margin-top: 10px; /* Add space above the button */
+  text-align: center; /* Center the text in the button */
+  display: block; /* Ensure the button takes up full width */
+  margin-left: auto; /* Center the button horizontally */
+  margin-right: auto; /* Center the button horizontally */
+}
+
+/* Button hover effect */
+.btn-primary:hover[b-1wajpc3zzi] {
+  background-color: #4c7c8f; /* Darken button color on hover */
+}
+/* _content/Frontend/Components/Modals/EditWasteReportModal.razor.rz.scp.css */
+.submit-btn[b-493uouoigd] {
+    background-color: #014a63; /* Custom background color */
+    color: white; /* White text */
+    border: none; /* Remove borders */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px 15px; /* Padding for better spacing */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.submit-btn:hover[b-493uouoigd] {
+    background-color: #4c7c8f; /* Custom hover background color */
+    color: white; /* Ensure text stays white on hover */
+}
+/* _content/Frontend/Components/Modals/NewWasteReportModal.razor.rz.scp.css */
+.submit-btn[b-u7qo937b3u] {
+    background-color: #014a63; /* Custom background color */
+    color: white; /* White text */
+    border: none; /* Remove borders */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px 15px; /* Padding for better spacing */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.submit-btn:hover[b-u7qo937b3u] {
+    background-color: #4c7c8f; /* Custom hover background color */
+    color: white; /* Ensure text stays white on hover */
+}
+/* _content/Frontend/Components/Modals/RegisterUserModal.razor.rz.scp.css */
+button[b-cx3k8xz3k1] {
+  width: 200px; /* Same width as input fields */
+  background-color: #014a63; /* Button background color */
+  color: white; /* Button text color */
+  padding: 10px; /* Add padding inside the button */
+  border: none; /* Remove default borders */
+  border-radius: 5px; /* Rounded corners for the button */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  margin-top: 10px; /* Add space above the button */
+  text-align: center; /* Center the text in the button */
+  display: block; /* Ensure the button takes up full width */
+  margin-left: auto; /* Center the button horizontally */
+  margin-right: auto; /* Center the button horizontally */
+}
+
+/* Button hover effect */
+.btn-primary:hover[b-cx3k8xz3k1] {
+  background-color: #4c7c8f; /* Darken button color on hover */
+}
+/* _content/Frontend/Components/Pages/Home.razor.rz.scp.css */
+.dashboard-title[b-ki5ckatzno] {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-subtitle[b-ki5ckatzno] {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.responsive-chart[b-ki5ckatzno] {
+    width: 100%; /* Full width of the parent container */
+    max-width: 90vw; /* Maximum width constraint for larger screens */
+}
+
+/* Flex container for Line Chart and Bar Chart side by side */
+.chart-section-row[b-ki5ckatzno] {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.chart-section[b-ki5ckatzno] {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 1rem;
+    border: 2px solid #eeeeee;
+    border-radius: 8px;
+}
+
+.chart-title[b-ki5ckatzno] {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #333;
+}
+/* _content/Frontend/Components/Pages/LandingPage.razor.rz.scp.css */
+*[b-1uetml2cpj] {
+    font-family: "Afacad Flux", sans-serif;
+}
+
+header[b-1uetml2cpj] {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        width: 100%;
+        z-index: 2;
+    }
+
+    .logo img[b-1uetml2cpj] {
+        width: 180px;
+    }
+
+    .buttons[b-1uetml2cpj] {
+        display: flex;
+        gap: 15px;
+    }
+
+    .login-btn[b-1uetml2cpj], .signup-btn[b-1uetml2cpj] {
+        padding: 10px 20px;
+        border: 1px solid #014a63;
+        color: #014a63;
+        text-decoration: none;
+        background-color: transparent;
+        border-radius: 20px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: .3s ease;
+    }
+
+    .login-btn-2[b-1uetml2cpj] {
+        padding: 10px 20px;
+        border: 1px solid white;
+        color: white;
+        text-decoration: none;
+        background-color: transparent;
+        border-radius: 20px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: .3s ease;
+    }
+
+    .signup-btn[b-1uetml2cpj] {
+        background-color: #014a63;
+        color: white;
+    }
+
+    .login-btn:hover[b-1uetml2cpj], .login-btn-2:hover[b-1uetml2cpj], .signup-btn:hover[b-1uetml2cpj] {
+        background-color: #4c7c8f;
+        color: white;
+        border-color: #4c7c8f;
+    }
+
+    .hero[b-1uetml2cpj] {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Adjust height minus header */
+        text-align: center;
+        background-image: url('/images/hero-bg.jpg'); /* Path to your background image */
+        background-size: cover; /* Ensures the image covers the entire section */
+        background-position: center; /* Centers the image */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        color: white; /* Adjust text color to ensure readability */
+        padding: 20px;
+    }
+
+    .hero[b-1uetml2cpj]::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.2); /* Black overlay with 50% opacity */
+        z-index: 1; /* Make sure it's behind the text */
+    }
+
+    .hero h1[b-1uetml2cpj], .hero p[b-1uetml2cpj], .hero .buttons[b-1uetml2cpj] {
+        position: relative;
+        z-index: 2; /* Ensure text is above the overlay */
+    }
+
+    .hero h1[b-1uetml2cpj] {
+        font-size: 4.5rem;
+        margin-bottom: 20px;
+        color: white; /* Change text color for better contrast */
+        width: 64%;
+    }
+
+    .hero p[b-1uetml2cpj] {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin-bottom: 40px;
+        color: white; /* Change text color for better contrast */
+        width: 36%;
+    }
+/* _content/Frontend/Components/Pages/Login.razor.rz.scp.css */
+*[b-1j1h6k9ujg] {
+  font-family: "Afacad Flux", sans-serif;
+}
+
+h2[b-1j1h6k9ujg] {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Login.razor.css */
+
+label[b-1j1h6k9ujg] {
+  font-size: 20px;
+}
+
+img[b-1j1h6k9ujg] {
+  width: 82%;
+  margin-bottom: 54px;
+}
+
+.form-group[b-1j1h6k9ujg] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button[b-1j1h6k9ujg] {
+  width: 200px; /* Same width as input fields */
+  background-color: #014a63; /* Button background color */
+  color: white; /* Button text color */
+  padding: 10px; /* Add padding inside the button */
+  border: none; /* Remove default borders */
+  border-radius: 5px; /* Rounded corners for the button */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  margin-top: 10px; /* Add space above the button */
+  text-align: center; /* Center the text in the button */
+  display: block; /* Ensure the button takes up full width */
+  margin-left: auto; /* Center the button horizontally */
+  margin-right: auto; /* Center the button horizontally */
+}
+
+/* Button hover effect */
+.btn-primary:hover[b-1j1h6k9ujg] {
+  background-color: #013b52; /* Darken button color on hover */
+}
+/* _content/Frontend/Components/Pages/ManageUsers.razor.rz.scp.css */
+.btn[b-pkwo8k5cy3] {
+    background-color: #014a63;
+    color: white;
+    gap: 0.5rem;
+    outline: none;
+    transition: .3s ease;
+}
+
+.btn:hover[b-pkwo8k5cy3] {
+    background-color: #4c7c8f;
+    color: white;
+    gap: 0.5rem;
+}
+
+.loading-data-text[b-pkwo8k5cy3],
+.no-data-available-text[b-pkwo8k5cy3] {
+    font-size: 1.5rem;
+}
+
+.loading-data-text-recommend[b-pkwo8k5cy3] {
+    color: #a7a7a7;
+}
+
+.no-data-available-image[b-pkwo8k5cy3] {
+    width: 16vw;
+}
+
+.table[b-pkwo8k5cy3] {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+
+.table th[b-pkwo8k5cy3], 
+.table td[b-pkwo8k5cy3] {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+.table thead th[b-pkwo8k5cy3] {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.table tbody + tbody[b-pkwo8k5cy3] {
+    border-top: 2px solid #dee2e6;
+}
+
+.table-hover tbody tr:hover[b-pkwo8k5cy3] {
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+.table-striped tbody tr:nth-of-type(odd)[b-pkwo8k5cy3] {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table-rounded[b-pkwo8k5cy3] {
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.table th[b-pkwo8k5cy3] {
+    background-color: #014a63;
+    color: white;
+    text-align: left;
+}
+
+.table td[b-pkwo8k5cy3] {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.table td[b-pkwo8k5cy3],
+.table th[b-pkwo8k5cy3] {
+    border: none; /* Remove inner borders */
+}
+
+.table-striped tbody tr:nth-of-type(odd)[b-pkwo8k5cy3] {
+    background-color: #eeeeee;
+}
+
+.shadow-sm[b-pkwo8k5cy3] {
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.075);
+}
+
+th:first-of-type[b-pkwo8k5cy3] {
+  border-top-left-radius: 10px;
+}
+th:last-of-type[b-pkwo8k5cy3] {
+  border-top-right-radius: 10px;
+}
+tr:last-of-type td:first-of-type[b-pkwo8k5cy3] {
+  border-bottom-left-radius: 10px;
+}
+tr:last-of-type td:last-of-type[b-pkwo8k5cy3] {
+  border-bottom-right-radius: 10px;
+}
+
+h4[b-pkwo8k5cy3] {
+    margin-top: 2rem;
+    color: #212529;
+    font-weight: bold;
+}
+
+/* Make the button round */
+.actions-dropdown-btn[b-pkwo8k5cy3] {
+    width: 24px; /* Set width */
+    height: 24px; /* Set height */
+    border-radius: 50%; /* Make it a circle */
+    border: none; /* Remove border */
+    background-color: #dfdfdf; /* Background color */
+    display: flex; /* Center content */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s ease; /* Smooth color transition */
+    color: #014a63;
+}
+
+    /* Remove blue outline */
+.actions-dropdown-btn:focus[b-pkwo8k5cy3] {
+    outline: none;
+    box-shadow: none;
+}
+
+    /* Change color on hover */
+.actions-dropdown-btn:hover[b-pkwo8k5cy3] {
+    background-color: #4c7c8f; /* Change to your preferred hover color */
+    color: #fff; /* Change icon color to white */
+}
+
+    /* Change icon color inside the button */
+.actions-dropdown-btn svg[b-pkwo8k5cy3] {
+    color: inherit; /* Inherit the color from the button */
+}
+
+.action-button[b-pkwo8k5cy3] {
+    user-select: none;
+    transition: .3s ease;
+    padding: 8px 12px; 
+    cursor: pointer;
+}
+
+.action-button:hover[b-pkwo8k5cy3] {
+    color: white;
+    background-color: #4c7c8f;
+}
+/* _content/Frontend/Components/Pages/ResyclingTips.razor.rz.scp.css */
+.tips-title[b-d8tezygva6] {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.checked[b-d8tezygva6] {
+  text-decoration: line-through;
+}
+
+.tips-subtitle[b-d8tezygva6] {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+.loading-container[b-d8tezygva6] {
+  text-align: center;
+  padding: 2rem;
+}
+
+.loading-text[b-d8tezygva6] {
+  font-size: 1.2rem;
+  color: #888;
+}
+
+.recycling-tips-list[b-d8tezygva6] {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recycling-tip-item[b-d8tezygva6] {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  background-color: #fff;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  width: 50%;
+}
+
+.recycling-tip-item:hover[b-d8tezygva6] {
+  background-color: #f0f8ff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.tip-label[b-d8tezygva6] {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.tip-text[b-d8tezygva6] {
+  margin-left: 10px;
+  font-size: 1rem;
+  color: #333;
+  user-select: none;
+}
+
+.tip-text.checked-tip[b-d8tezygva6] {
+  text-decoration: line-through;
+  color: #888;
+}
+
+input[type="checkbox"][b-d8tezygva6] {
+  transform: scale(1.3);
+  accent-color: #4caf50;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .tips-container[b-d8tezygva6] {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .tips-title[b-d8tezygva6] {
+    font-size: 1.5rem;
+  }
+
+  .tips-subtitle[b-d8tezygva6] {
+    font-size: 0.9rem;
+  }
+
+  .recycling-tip-item[b-d8tezygva6] {
+    padding: 0.6rem;
+  }
+}
+/* _content/Frontend/Components/Pages/WasteAnalytics.razor.rz.scp.css */
+.dashboard-title[b-nrfauk4478] {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-subtitle[b-nrfauk4478] {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.chart-title[b-nrfauk4478] {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #333;
+}
+
+.chart-section-row[b-nrfauk4478] {
+    display: flex;
+    align-items: center;
+}
+
+.chart-section[b-nrfauk4478] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 1rem;
+    border: 2px solid #eeeeee;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.loading-data-text[b-nrfauk4478],
+.no-data-available-text[b-nrfauk4478] {
+    font-size: 1.5rem;
+}
+
+.loading-data-text-recommend[b-nrfauk4478] {
+    color: #a7a7a7;
+}
+
+.no-data-available-image[b-nrfauk4478] {
+    width: 16vw;
+}
+
+.table[b-nrfauk4478] {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+
+.table th[b-nrfauk4478], 
+.table td[b-nrfauk4478] {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+.table thead th[b-nrfauk4478] {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.table tbody + tbody[b-nrfauk4478] {
+    border-top: 2px solid #dee2e6;
+}
+
+.table-hover tbody tr:hover[b-nrfauk4478] {
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+.table-striped tbody tr:nth-of-type(odd)[b-nrfauk4478] {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table-rounded[b-nrfauk4478] {
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.table th[b-nrfauk4478] {
+    background-color: #014a63;
+    color: white;
+    text-align: left;
+}
+
+.table td[b-nrfauk4478] {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.table td[b-nrfauk4478],
+.table th[b-nrfauk4478] {
+    border: none; /* Remove inner borders */
+}
+
+.table-striped tbody tr:nth-of-type(odd)[b-nrfauk4478] {
+    background-color: #eeeeee;
+}
+
+.shadow-sm[b-nrfauk4478] {
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.075);
+}
+
+th:first-of-type[b-nrfauk4478] {
+  border-top-left-radius: 10px;
+}
+th:last-of-type[b-nrfauk4478] {
+  border-top-right-radius: 10px;
+}
+tr:last-of-type td:first-of-type[b-nrfauk4478] {
+  border-bottom-left-radius: 10px;
+}
+tr:last-of-type td:last-of-type[b-nrfauk4478] {
+  border-bottom-right-radius: 10px;
+}
+
+h4[b-nrfauk4478] {
+    margin-top: 2rem;
+    color: #212529;
+    font-weight: bold;
+}
+
+/* All time emissions */
+.summary-card[b-nrfauk4478] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 150px;
+    margin-left: 20px;
+    border-radius: 8px;
+}
+
+.card[b-nrfauk4478] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid #eeeeee;
+}
+
+.card-body[b-nrfauk4478] {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-value[b-nrfauk4478] {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.card-text[b-nrfauk4478] {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.card img[b-nrfauk4478] {
+    margin-top: 10px;
+    width: 30%;
+}
+
+
+/* Make the button round */
+.actions-dropdown-btn[b-nrfauk4478] {
+    width: 24px; /* Set width */
+    height: 24px; /* Set height */
+    border-radius: 50%; /* Make it a circle */
+    border: none; /* Remove border */
+    background-color: #dfdfdf; /* Background color */
+    display: flex; /* Center content */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s ease; /* Smooth color transition */
+}
+
+    /* Remove blue outline */
+.actions-dropdown-btn:focus[b-nrfauk4478] {
+    outline: none;
+    box-shadow: none;
+}
+
+    /* Change color on hover */
+.actions-dropdown-btn:hover[b-nrfauk4478] {
+    background-color: #4c7c8f; /* Change to your preferred hover color */
+    color: #fff; /* Change icon color to white */
+}
+
+    /* Change icon color inside the button */
+.actions-dropdown-btn svg[b-nrfauk4478] {
+    color: inherit; /* Inherit the color from the button */
+}
+
+.action-button[b-nrfauk4478] {
+    user-select: none;
+    transition: .3s ease;
+    padding: 8px 12px; 
+    cursor: pointer;
+}
+
+.action-button:hover[b-nrfauk4478] {
+    color: white;
+    background-color: #4c7c8f;
+}

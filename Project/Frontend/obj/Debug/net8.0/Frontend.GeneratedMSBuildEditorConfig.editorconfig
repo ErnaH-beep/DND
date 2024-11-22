@@ -1,0 +1,111 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Frontend
+build_property.RootNamespace = Frontend
+build_property.ProjectDir = D:\Code\C#\SepProject\Project\Frontend\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Code\C#\SepProject\Project\Frontend
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Code/C\#/SepProject/Project/Frontend/Components/App.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Components/TaskCard.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb21wb25lbnRzXFRhc2tDYXJkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Layout/EmptyLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcRW1wdHlMYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Modals/CreateTaskModal.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNb2RhbHNcQ3JlYXRlVGFza01vZGFsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Modals/DeleteReportModal.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNb2RhbHNcRGVsZXRlUmVwb3J0TW9kYWwucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Modals/DeleteUserModal.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNb2RhbHNcRGVsZXRlVXNlck1vZGFsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Pages/Error.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Pages/TaskBoard.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xUYXNrQm9hcmQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Routes.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/C\#/SepProject/Project/Frontend/Components/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Components/UserProfileDropdown.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb21wb25lbnRzXFVzZXJQcm9maWxlRHJvcGRvd24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-bsi848zlm0
+
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-cj3fj28uav
+
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-ftcrkoicqg
+
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Modals/EditUserModal.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNb2RhbHNcRWRpdFVzZXJNb2RhbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-1wajpc3zzi
+
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Modals/EditWasteReportModal.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNb2RhbHNcRWRpdFdhc3RlUmVwb3J0TW9kYWwucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-493uouoigd
+
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Modals/NewWasteReportModal.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNb2RhbHNcTmV3V2FzdGVSZXBvcnRNb2RhbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-u7qo937b3u
+
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Modals/RegisterUserModal.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNb2RhbHNcUmVnaXN0ZXJVc2VyTW9kYWwucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-cx3k8xz3k1
+
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-ki5ckatzno
+
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Pages/LandingPage.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMYW5kaW5nUGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-1uetml2cpj
+
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Pages/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMb2dpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-1j1h6k9ujg
+
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Pages/ManageUsers.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNYW5hZ2VVc2Vycy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-pkwo8k5cy3
+
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Pages/ResyclingTips.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xSZXN5Y2xpbmdUaXBzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-d8tezygva6
+
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Pages/WasteAnalytics.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXYXN0ZUFuYWx5dGljcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-nrfauk4478

@@ -1,0 +1,41 @@
+.dropdown .user-profile-btn[b-bsi848zlm0] {
+    border: none; /* Remove border */
+    display: flex; /* Center content */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s ease; /* Smooth color transition */
+    color: black;
+    margin: 0;
+}
+
+.btn-link[b-bsi848zlm0] {
+    margin-left: 1rem;
+}
+
+/* Remove blue outline */
+.user-profile-btn:focus[b-bsi848zlm0] {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Change color on hover */
+.user-profile-btn:hover[b-bsi848zlm0] {
+    color: #4c7c8f; /* Change icon color to white */
+}
+
+.user-profile-btn svg[b-bsi848zlm0] {
+    color: inherit; /* Inherit color from button */
+}
+
+.dropdown-menu .action-button[b-bsi848zlm0] {
+    user-select: none;
+    transition: .3s ease;
+    padding: 8px 12px; 
+    cursor: pointer;
+}
+
+.dropdown-menu .action-button:hover[b-bsi848zlm0] {
+    color: white;
+    background-color: #4c7c8f;
+}

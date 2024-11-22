@@ -1,0 +1,50 @@
+*[b-1j1h6k9ujg] {
+  font-family: "Afacad Flux", sans-serif;
+}
+
+h2[b-1j1h6k9ujg] {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Login.razor.css */
+
+label[b-1j1h6k9ujg] {
+  font-size: 20px;
+}
+
+img[b-1j1h6k9ujg] {
+  width: 82%;
+  margin-bottom: 54px;
+}
+
+.form-group[b-1j1h6k9ujg] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button[b-1j1h6k9ujg] {
+  width: 200px; /* Same width as input fields */
+  background-color: #014a63; /* Button background color */
+  color: white; /* Button text color */
+  padding: 10px; /* Add padding inside the button */
+  border: none; /* Remove default borders */
+  border-radius: 5px; /* Rounded corners for the button */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  margin-top: 10px; /* Add space above the button */
+  text-align: center; /* Center the text in the button */
+  display: block; /* Ensure the button takes up full width */
+  margin-left: auto; /* Center the button horizontally */
+  margin-right: auto; /* Center the button horizontally */
+}
+
+/* Button hover effect */
+.btn-primary:hover[b-1j1h6k9ujg] {
+  background-color: #013b52; /* Darken button color on hover */
+}

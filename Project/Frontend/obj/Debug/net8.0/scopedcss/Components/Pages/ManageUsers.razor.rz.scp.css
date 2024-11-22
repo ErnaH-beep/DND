@@ -1,0 +1,148 @@
+.btn[b-pkwo8k5cy3] {
+    background-color: #014a63;
+    color: white;
+    gap: 0.5rem;
+    outline: none;
+    transition: .3s ease;
+}
+
+.btn:hover[b-pkwo8k5cy3] {
+    background-color: #4c7c8f;
+    color: white;
+    gap: 0.5rem;
+}
+
+.loading-data-text[b-pkwo8k5cy3],
+.no-data-available-text[b-pkwo8k5cy3] {
+    font-size: 1.5rem;
+}
+
+.loading-data-text-recommend[b-pkwo8k5cy3] {
+    color: #a7a7a7;
+}
+
+.no-data-available-image[b-pkwo8k5cy3] {
+    width: 16vw;
+}
+
+.table[b-pkwo8k5cy3] {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+
+.table th[b-pkwo8k5cy3], 
+.table td[b-pkwo8k5cy3] {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+.table thead th[b-pkwo8k5cy3] {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.table tbody + tbody[b-pkwo8k5cy3] {
+    border-top: 2px solid #dee2e6;
+}
+
+.table-hover tbody tr:hover[b-pkwo8k5cy3] {
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+.table-striped tbody tr:nth-of-type(odd)[b-pkwo8k5cy3] {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table-rounded[b-pkwo8k5cy3] {
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.table th[b-pkwo8k5cy3] {
+    background-color: #014a63;
+    color: white;
+    text-align: left;
+}
+
+.table td[b-pkwo8k5cy3] {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.table td[b-pkwo8k5cy3],
+.table th[b-pkwo8k5cy3] {
+    border: none; /* Remove inner borders */
+}
+
+.table-striped tbody tr:nth-of-type(odd)[b-pkwo8k5cy3] {
+    background-color: #eeeeee;
+}
+
+.shadow-sm[b-pkwo8k5cy3] {
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.075);
+}
+
+th:first-of-type[b-pkwo8k5cy3] {
+  border-top-left-radius: 10px;
+}
+th:last-of-type[b-pkwo8k5cy3] {
+  border-top-right-radius: 10px;
+}
+tr:last-of-type td:first-of-type[b-pkwo8k5cy3] {
+  border-bottom-left-radius: 10px;
+}
+tr:last-of-type td:last-of-type[b-pkwo8k5cy3] {
+  border-bottom-right-radius: 10px;
+}
+
+h4[b-pkwo8k5cy3] {
+    margin-top: 2rem;
+    color: #212529;
+    font-weight: bold;
+}
+
+/* Make the button round */
+.actions-dropdown-btn[b-pkwo8k5cy3] {
+    width: 24px; /* Set width */
+    height: 24px; /* Set height */
+    border-radius: 50%; /* Make it a circle */
+    border: none; /* Remove border */
+    background-color: #dfdfdf; /* Background color */
+    display: flex; /* Center content */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s ease; /* Smooth color transition */
+    color: #014a63;
+}
+
+    /* Remove blue outline */
+.actions-dropdown-btn:focus[b-pkwo8k5cy3] {
+    outline: none;
+    box-shadow: none;
+}
+
+    /* Change color on hover */
+.actions-dropdown-btn:hover[b-pkwo8k5cy3] {
+    background-color: #4c7c8f; /* Change to your preferred hover color */
+    color: #fff; /* Change icon color to white */
+}
+
+    /* Change icon color inside the button */
+.actions-dropdown-btn svg[b-pkwo8k5cy3] {
+    color: inherit; /* Inherit the color from the button */
+}
+
+.action-button[b-pkwo8k5cy3] {
+    user-select: none;
+    transition: .3s ease;
+    padding: 8px 12px; 
+    cursor: pointer;
+}
+
+.action-button:hover[b-pkwo8k5cy3] {
+    color: white;
+    background-color: #4c7c8f;
+}

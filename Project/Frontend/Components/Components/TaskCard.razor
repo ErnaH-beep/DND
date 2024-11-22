@@ -1,0 +1,38 @@
+@using Shared.Models
+
+<div class="task-card">
+    <h5>@Task.Title</h5>
+    <p>@Task.Description</p>
+    <div class="task-details">
+        <span class="badge bg-@GetPriorityColor()">@Task.Priority</span>
+        <span>Due: @Task.DueDate.ToShortDateString()</span>
+    </div>
+    <div class="task-actions">
+        <select class="form-select" value="@Task.Status" @onchange="HandleStatusChange">
+            <option value="Todo">To Do</option>
+            <option value="InProgress">In Progress</option>
+            <option value="Done">Done</option>
+        </select>
+    </div>
+</div>
+
+@code {
+    [Parameter] public Shared.Models.Task Task { get; set; } = default!;
+    [Parameter] public EventCallback<(Shared.Models.Task, string)> OnStatusChange { get; set; }
+
+    private string GetPriorityColor() => Task.Priority switch
+    {
+        "High" => "danger",
+        "Medium" => "warning",
+        "Low" => "success",
+        _ => "secondary"
+    };
+
+    private async System.Threading.Tasks.Task HandleStatusChange(ChangeEventArgs e)
+    {
+        if (e.Value is string newStatus)
+        {
+            await OnStatusChange.InvokeAsync((Task, newStatus));
+        }
+    }
+} 

@@ -1,0 +1,78 @@
+@page "/login"
+@layout Layout.EmptyLayout
+@inject IHttpClientFactory ClientFactory
+@inject ILocalStorageService LocalStorage
+@inject NavigationManager NavigationManager
+
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="p-4" style="width: 100%; max-width: 400px;">
+
+        <div style="display: flex; justify-content: center;">
+            <img src="images/salling-group-logo.png" alt="Salling Group Logo">
+        </div>
+        
+        <h2 class="text-center mb-4">Login</h2>
+
+        <EditForm Model="@loginModel" OnValidSubmit="@HandleLogin" FormName="loginForm">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+
+            <div class="form-group">
+                <label for="employeeId">Employee ID</label>
+                <InputText id="employeeId" class="form-control" @bind-Value="loginModel.EmployeeId" placeholder="(e.g. 123456)" style="font-size: 18px;" />
+            </div>
+
+            <div class="form-group mt-3">
+                <label for="password">Password</label>
+                <InputText id="password" class="form-control" type="password" @bind-Value="loginModel.Password" placeholder="(e.g. 1234)" style="font-size: 18px;" />
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 mt-4" style="font-size: 20px;">Login</button>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    [SupplyParameterFromForm]
+    private PersonBase loginModel { get; set; } = new PersonBase();
+
+    private async Task HandleLogin()
+    {
+        try
+        {
+            var client = ClientFactory.CreateClient("BackendAPI");
+            var response = await client.PostAsJsonAsync("api/People/login", loginModel);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var responseData = await response.Content.ReadFromJsonAsync<Dictionary<string, string>>();
+                if (responseData != null &&
+                    responseData.TryGetValue("token", out var token) &&
+                    responseData.TryGetValue("employeeId", out var employeeId) &&
+                    responseData.TryGetValue("role", out var role)) // Retrieve role from response
+                {                    
+                    await LocalStorage.SetItemAsync("authToken", token);
+                    await LocalStorage.SetItemAsync("employeeId", employeeId);
+                    await LocalStorage.SetItemAsync("userRole", role); // Store role in local storage
+
+                    Console.WriteLine("Login successful. Token and Role stored.");
+                    
+                    // Redirect to the employee's dashboard
+                    NavigationManager.NavigateTo($"/dashboard");
+                }
+                else
+                {
+                    Console.WriteLine("Login succeeded but token, employeeId, or role was not received.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Login failed");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+        }
+    }
+}

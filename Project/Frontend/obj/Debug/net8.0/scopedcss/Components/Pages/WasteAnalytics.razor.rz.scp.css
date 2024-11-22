@@ -1,0 +1,210 @@
+.dashboard-title[b-nrfauk4478] {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-subtitle[b-nrfauk4478] {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.chart-title[b-nrfauk4478] {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #333;
+}
+
+.chart-section-row[b-nrfauk4478] {
+    display: flex;
+    align-items: center;
+}
+
+.chart-section[b-nrfauk4478] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 1rem;
+    border: 2px solid #eeeeee;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.loading-data-text[b-nrfauk4478],
+.no-data-available-text[b-nrfauk4478] {
+    font-size: 1.5rem;
+}
+
+.loading-data-text-recommend[b-nrfauk4478] {
+    color: #a7a7a7;
+}
+
+.no-data-available-image[b-nrfauk4478] {
+    width: 16vw;
+}
+
+.table[b-nrfauk4478] {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+
+.table th[b-nrfauk4478], 
+.table td[b-nrfauk4478] {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+.table thead th[b-nrfauk4478] {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.table tbody + tbody[b-nrfauk4478] {
+    border-top: 2px solid #dee2e6;
+}
+
+.table-hover tbody tr:hover[b-nrfauk4478] {
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+.table-striped tbody tr:nth-of-type(odd)[b-nrfauk4478] {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table-rounded[b-nrfauk4478] {
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.table th[b-nrfauk4478] {
+    background-color: #014a63;
+    color: white;
+    text-align: left;
+}
+
+.table td[b-nrfauk4478] {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.table td[b-nrfauk4478],
+.table th[b-nrfauk4478] {
+    border: none; /* Remove inner borders */
+}
+
+.table-striped tbody tr:nth-of-type(odd)[b-nrfauk4478] {
+    background-color: #eeeeee;
+}
+
+.shadow-sm[b-nrfauk4478] {
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.075);
+}
+
+th:first-of-type[b-nrfauk4478] {
+  border-top-left-radius: 10px;
+}
+th:last-of-type[b-nrfauk4478] {
+  border-top-right-radius: 10px;
+}
+tr:last-of-type td:first-of-type[b-nrfauk4478] {
+  border-bottom-left-radius: 10px;
+}
+tr:last-of-type td:last-of-type[b-nrfauk4478] {
+  border-bottom-right-radius: 10px;
+}
+
+h4[b-nrfauk4478] {
+    margin-top: 2rem;
+    color: #212529;
+    font-weight: bold;
+}
+
+/* All time emissions */
+.summary-card[b-nrfauk4478] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 150px;
+    margin-left: 20px;
+    border-radius: 8px;
+}
+
+.card[b-nrfauk4478] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid #eeeeee;
+}
+
+.card-body[b-nrfauk4478] {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-value[b-nrfauk4478] {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.card-text[b-nrfauk4478] {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.card img[b-nrfauk4478] {
+    margin-top: 10px;
+    width: 30%;
+}
+
+
+/* Make the button round */
+.actions-dropdown-btn[b-nrfauk4478] {
+    width: 24px; /* Set width */
+    height: 24px; /* Set height */
+    border-radius: 50%; /* Make it a circle */
+    border: none; /* Remove border */
+    background-color: #dfdfdf; /* Background color */
+    display: flex; /* Center content */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s ease; /* Smooth color transition */
+}
+
+    /* Remove blue outline */
+.actions-dropdown-btn:focus[b-nrfauk4478] {
+    outline: none;
+    box-shadow: none;
+}
+
+    /* Change color on hover */
+.actions-dropdown-btn:hover[b-nrfauk4478] {
+    background-color: #4c7c8f; /* Change to your preferred hover color */
+    color: #fff; /* Change icon color to white */
+}
+
+    /* Change icon color inside the button */
+.actions-dropdown-btn svg[b-nrfauk4478] {
+    color: inherit; /* Inherit the color from the button */
+}
+
+.action-button[b-nrfauk4478] {
+    user-select: none;
+    transition: .3s ease;
+    padding: 8px 12px; 
+    cursor: pointer;
+}
+
+.action-button:hover[b-nrfauk4478] {
+    color: white;
+    background-color: #4c7c8f;
+}

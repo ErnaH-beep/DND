@@ -1,0 +1,90 @@
+@Backend_HostAddress = https://localhost:5001
+
+
+POST {{Backend_HostAddress}}/api/WasteReports/
+Content-Type: application/json
+
+{
+    "wasteType": "Wood",
+    "wasteAmount": 20,
+    "wasteProcessingFacility": "Recycling",
+    "wasteDate": "2023-01-01",
+    "wasteCollector": "string"
+}
+
+###
+
+GET {{Backend_HostAddress}}/api/WasteReports/
+
+###
+
+GET {{Backend_HostAddress}}/api/WasteReports/8
+
+###
+
+GET {{Backend_HostAddress}}/api/WasteReports/?type=Plastic
+
+###
+
+GET {{Backend_HostAddress}}/api/wastereports/co2emission?startDate=2003-01-01&endDate=2024-12-31&userId=1
+
+###
+
+GET {{Backend_HostAddress}}/api/wastereports/co2emission
+
+###
+
+PUT {{Backend_HostAddress}}/api/WasteReports/1
+Content-Type: application/json
+
+{
+    "wasteType": "Plastic",
+    "wasteAmount": 20,
+    "wasteProcessingFacility": "Recycling",
+    "wasteDate": "2023-01-01",
+    "wasteCollector": "string"
+}
+
+###
+
+POST {{Backend_HostAddress}}/api/People/register
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "johndoe@example.com",
+    "employeeId": "123457",
+    "password": "1234",
+    "role": "manager"
+}
+
+###
+
+GET {{Backend_HostAddress}}/api/People
+
+###
+
+GET {{Backend_HostAddress}}/api/People/?role=Employee
+
+###
+
+GET {{Backend_HostAddress}}/api/People/?active=True
+
+###
+
+GET {{Backend_HostAddress}}/api/People/?role=Employee&active=true
+
+###
+
+PUT {{Backend_HostAddress}}/api/People/123456
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "password": "password",
+    "role": "Employee"
+}
+
+###
+

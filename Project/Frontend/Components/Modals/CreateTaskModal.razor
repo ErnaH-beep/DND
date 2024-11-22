@@ -1,0 +1,105 @@
+@inject IHttpClientFactory ClientFactory
+@using Shared.Models
+
+<Modal @ref="createTaskModal" title="Add New Task" IsVerticallyCentered="true" UseStaticBackdrop="true" CloseOnEscape="false">
+    <BodyTemplate>
+        <EditForm Model="@newTask" OnValidSubmit="@HandleSubmit">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <InputText id="title" class="form-control" @bind-Value="newTask.Title" />
+            </div>
+
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <InputTextArea id="description" class="form-control" @bind-Value="newTask.Description" rows="3" />
+            </div>
+
+            <div class="mb-3">
+                <label for="dueDate" class="form-label">Due Date</label>
+                <InputDate id="dueDate" class="form-control" @bind-Value="newTask.DueDate" min="@DateTime.Now.ToString("yyyy-MM-dd")" />
+            </div>
+
+            <div class="mb-3">
+                <label for="priority" class="form-label">Priority</label>
+                <InputSelect id="priority" class="form-select" @bind-Value="newTask.Priority">
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </InputSelect>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Create Task</button>
+        </EditForm>
+    </BodyTemplate>
+</Modal>
+
+@if (message != null)
+{
+    <div class="alert @messageClass mt-3">
+        @message
+    </div>
+}
+
+@code {
+    [Parameter] public EventCallback OnSubmitSuccess { get; set; }
+
+    private Shared.Models.Task newTask = new()
+    {
+        DueDate = DateTime.Now.AddDays(1),
+        Status = "Todo",
+        Priority = "Medium",
+        IsActive = true
+    };
+
+    private Modal createTaskModal = default!;
+    private string? message;
+    private string messageClass = string.Empty;
+
+    public async System.Threading.Tasks.Task ShowModal()
+    {
+        newTask = new()
+        {
+            DueDate = DateTime.Now.AddDays(1),
+            Status = "Todo",
+            Priority = "Medium",
+            IsActive = true
+        };
+        message = null;
+        await createTaskModal.ShowAsync();
+    }
+
+    public async System.Threading.Tasks.Task HideModal()
+    {
+        await createTaskModal.HideAsync();
+    }
+
+    private async System.Threading.Tasks.Task HandleSubmit()
+    {
+        try
+        {
+            var client = ClientFactory.CreateClient("BackendAPI");
+            var response = await client.PostAsJsonAsync("api/Tasks", newTask);
+
+            if (response.IsSuccessStatusCode)
+            {
+                message = "Task created successfully!";
+                messageClass = "alert-success";
+                await createTaskModal.HideAsync();
+                await OnSubmitSuccess.InvokeAsync();
+            }
+            else
+            {
+                message = "Failed to create task!";
+                messageClass = "alert-danger";
+            }
+        }
+        catch (Exception ex)
+        {
+            message = $"Error: {ex.Message}";
+            messageClass = "alert-danger";
+        }
+    }
+} 
