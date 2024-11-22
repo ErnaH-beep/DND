@@ -1,0 +1,17 @@
+C:\Users\mathi\Downloads\AuthSampleProject\DNDProject.FileStorage\bin\Debug\net8.0\DNDProject.FileStorage.deps.json
+C:\Users\mathi\Downloads\AuthSampleProject\DNDProject.FileStorage\bin\Debug\net8.0\DNDProject.FileStorage.dll
+C:\Users\mathi\Downloads\AuthSampleProject\DNDProject.FileStorage\bin\Debug\net8.0\DNDProject.FileStorage.pdb
+C:\Users\mathi\Downloads\AuthSampleProject\DNDProject.FileStorage\bin\Debug\net8.0\DNDProject.Application.dll
+C:\Users\mathi\Downloads\AuthSampleProject\DNDProject.FileStorage\bin\Debug\net8.0\DNDProject.Domain.dll
+C:\Users\mathi\Downloads\AuthSampleProject\DNDProject.FileStorage\bin\Debug\net8.0\DNDProject.Application.pdb
+C:\Users\mathi\Downloads\AuthSampleProject\DNDProject.FileStorage\bin\Debug\net8.0\DNDProject.Domain.pdb
+C:\Users\mathi\Downloads\AuthSampleProject\DNDProject.FileStorage\obj\Debug\net8.0\DNDProject.FileStorage.csproj.AssemblyReference.cache
+C:\Users\mathi\Downloads\AuthSampleProject\DNDProject.FileStorage\obj\Debug\net8.0\DNDProject.FileStorage.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mathi\Downloads\AuthSampleProject\DNDProject.FileStorage\obj\Debug\net8.0\DNDProject.FileStorage.AssemblyInfoInputs.cache
+C:\Users\mathi\Downloads\AuthSampleProject\DNDProject.FileStorage\obj\Debug\net8.0\DNDProject.FileStorage.AssemblyInfo.cs
+C:\Users\mathi\Downloads\AuthSampleProject\DNDProject.FileStorage\obj\Debug\net8.0\DNDProject.FileStorage.csproj.CoreCompileInputs.cache
+C:\Users\mathi\Downloads\AuthSampleProject\DNDProject.FileStorage\obj\Debug\net8.0\DNDProje.64266CA0.Up2Date
+C:\Users\mathi\Downloads\AuthSampleProject\DNDProject.FileStorage\obj\Debug\net8.0\DNDProject.FileStorage.dll
+C:\Users\mathi\Downloads\AuthSampleProject\DNDProject.FileStorage\obj\Debug\net8.0\refint\DNDProject.FileStorage.dll
+C:\Users\mathi\Downloads\AuthSampleProject\DNDProject.FileStorage\obj\Debug\net8.0\DNDProject.FileStorage.pdb
+C:\Users\mathi\Downloads\AuthSampleProject\DNDProject.FileStorage\obj\Debug\net8.0\ref\DNDProject.FileStorage.dll
