@@ -13,7 +13,7 @@ public class Co2CalculatorService {
     public async Task<double> GetCo2EmissionTotalAsync(DateOnly? startDate, DateOnly? endDate, int? userId, string? wasteType) {
         var wasteReports = (await _databaseService.ReadDBAsync()).ToList();
         double totalCo2Emission;
-
+        
         // Filter reports 
         wasteReports = wasteReports.Where(wr => {
             var wasteDateToken = wr["wasteDate"];

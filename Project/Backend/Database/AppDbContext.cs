@@ -6,7 +6,7 @@ namespace Backend.Data
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-        public DbSet<Task> Tasks { get; set; }
+        public DbSet<Shared.Models.Task> Tasks { get; set; }
         public DbSet<ProjectModel> Projects { get; set; }
         public DbSet<PersonBase> People { get; set; }
 
@@ -17,7 +17,7 @@ namespace Backend.Data
                 .HasValue<Employee>("Employee")
                 .HasValue<Manager>("Manager");
 
-            modelBuilder.Entity<Task>(entity =>
+            modelBuilder.Entity<Shared.Models.Task>(entity =>
             {
                 entity.HasKey(t => t.Id);
                 entity.Property(t => t.Title).IsRequired();

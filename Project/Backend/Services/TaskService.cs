@@ -12,21 +12,21 @@ namespace Project.Backend.Services
             _dbContext = dbContext;
         }
 
-        public async Task<List<Task>> GetTasksByProject(string projectId)
+        public async Task<List<Shared.Models.Task>> GetTasksByProject(string projectId)
         {
             return await _dbContext.Tasks
                 .Where(t => t.ProjectId == projectId && t.IsActive)
                 .ToListAsync();
         }
 
-        public async Task<List<Task>> GetTasksByAssignee(string employeeId)
+        public async Task<List<Shared.Models.Task>> GetTasksByAssignee(string employeeId)
         {
             return await _dbContext.Tasks
                 .Where(t => t.AssignedToId == employeeId && t.IsActive)
                 .ToListAsync();
         }
 
-        public async Task<string> CreateTask(Task task)
+        public async Task<string> CreateTask(Shared.Models.Task task)
         {
             _dbContext.Tasks.Add(task);
             await _dbContext.SaveChangesAsync();
@@ -43,7 +43,7 @@ namespace Project.Backend.Services
             return "Task status updated successfully";
         }
 
-        public async Task<List<Task>> GetAllTasks()
+        public async Task<List<Shared.Models.Task>> GetAllTasks()
         {
             return await _dbContext.Tasks
                 .Where(t => t.IsActive)

@@ -20,7 +20,7 @@ namespace Project.Backend.Controllers
         }
 
         [HttpGet("project/{projectId}")]
-        public async Task<ActionResult<List<Task>>> GetProjectTasks(string projectId)
+        public async Task<ActionResult<List<Shared.Models.Task>>> GetProjectTasks(string projectId)
         {
             try
             {
@@ -35,7 +35,7 @@ namespace Project.Backend.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateTask([FromBody] Task task)
+        public async Task<IActionResult> CreateTask([FromBody] Shared.Models.Task task)
         {
             try
             {
@@ -50,11 +50,12 @@ namespace Project.Backend.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<Task>>> GetTasks()
+        public async Task<ActionResult<List<Shared.Models.Task>>> GetTasks()
         {
             try
             {
                 var tasks = await _taskService.GetAllTasks();
+                Console.WriteLine("tasks from all tasks: " + tasks);
                 return Ok(tasks);
             }
             catch (Exception ex)
