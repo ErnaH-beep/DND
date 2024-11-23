@@ -70,3 +70,4 @@ D:\Code\C#\SepProject\Project\Frontend\obj\Debug\net8.0\refint\Frontend.dll
 D:\Code\C#\SepProject\Project\Frontend\obj\Debug\net8.0\Frontend.pdb
 D:\Code\C#\SepProject\Project\Frontend\obj\Debug\net8.0\Frontend.genruntimeconfig.cache
 D:\Code\C#\SepProject\Project\Frontend\obj\Debug\net8.0\ref\Frontend.dll
+D:\Code\C#\SepProject\Project\Frontend\obj\Debug\net8.0\scopedcss\Components\Pages\TaskBoard.razor.rz.scp.css

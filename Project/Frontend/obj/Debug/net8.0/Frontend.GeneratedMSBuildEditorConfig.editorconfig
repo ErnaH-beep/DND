@@ -22,10 +22,6 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Code/C\#/SepProject/Project/Frontend/Components/Components/TaskCard.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb21wb25lbnRzXFRhc2tDYXJkLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/Code/C\#/SepProject/Project/Frontend/Components/Layout/EmptyLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcRW1wdHlMYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -44,10 +40,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Code/C\#/SepProject/Project/Frontend/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Code/C\#/SepProject/Project/Frontend/Components/Pages/TaskBoard.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xUYXNrQm9hcmQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Code/C\#/SepProject/Project/Frontend/Components/Routes.razor]
@@ -105,6 +97,10 @@ build_metadata.AdditionalFiles.CssScope = b-pkwo8k5cy3
 [D:/Code/C\#/SepProject/Project/Frontend/Components/Pages/ResyclingTips.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xSZXN5Y2xpbmdUaXBzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-d8tezygva6
+
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Pages/TaskBoard.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xUYXNrQm9hcmQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-ut32s5viqw
 
 [D:/Code/C\#/SepProject/Project/Frontend/Components/Pages/WasteAnalytics.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXYXN0ZUFuYWx5dGljcy5yYXpvcg==

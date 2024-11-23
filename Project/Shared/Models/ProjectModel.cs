@@ -1,3 +1,4 @@
+namespace Shared.Models;
 public class ProjectModel
 {
     public string Id { get; set; } = Guid.NewGuid().ToString();

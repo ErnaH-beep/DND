@@ -49,6 +49,13 @@ namespace Project.Backend.Controllers
             }
         }
 
+        [HttpPut("{taskId}/status")]
+        public async Task<IActionResult> UpdateTaskStatus(int taskId, [FromBody] string status)
+        {
+            await _taskService.UpdateTaskStatus(taskId, status);
+            return Ok("Task status updated successfully");
+        }
+
         [HttpGet]
         public async Task<ActionResult<List<Shared.Models.Task>>> GetTasks()
         {
