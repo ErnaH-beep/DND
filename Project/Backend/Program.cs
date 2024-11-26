@@ -21,7 +21,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 // Register services
 builder.Services.AddScoped<PersonService>();
 builder.Services.AddScoped<TaskService>();
-builder.Services.AddScoped<Co2CalculatorService>();
+builder.Services.AddScoped<ProjectService>();
 
 // Configure authentication to use JWT Bearer tokens
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

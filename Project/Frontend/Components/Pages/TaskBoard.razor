@@ -5,10 +5,21 @@
 
 <div class="d-flex justify-content-between align-items-center">
     <h3>Task Board</h3>
-    <button class="btn btn-primary mb-3" @onclick="async () => await createTaskModal.ShowModal()">
-        <i class="bi bi-plus"></i> Add New Task
-    </button>
-    <CreateTaskModal @ref="createTaskModal" OnSubmitSuccess="LoadTasks" />
+    <select class="form-select w-25" @onchange="HandleProjectSelectionChange">
+        <option value="">All Tasks</option>
+        @foreach (var project in Projects)
+        {
+            <option value="@project.Id">@project.Name</option>
+        }
+    </select>
+    <div class="d-flex align-items-center">
+        <button class="btn btn-primary mb-3 me-2" @onclick="async () => await createProjectModal.ShowModal()">
+            <i class="bi bi-folder-plus"></i> New Project
+        </button>
+        <button class="btn btn-primary mb-3" @onclick="async () => await createTaskModal.ShowModal()">
+            <i class="bi bi-plus"></i> Add New Task
+        </button>
+    </div>
 </div>
 
 @if (Tasks.Count == 0)
@@ -24,6 +35,8 @@ else
             <tr>
                 <th>Title</th>
                 <th>Description</th>
+                <th>Project</th>
+                <th>Assigned To</th>
                 <th>Due Date</th>
                 <th>Status</th>
                 <th>Priority</th>
@@ -33,12 +46,15 @@ else
         <tbody>
             @foreach (var task in Tasks)
             {
-                <tr>
+                <tr @key="task.Id">
                     <td>@task.Title</td>
                     <td>@task.Description</td>
+                    <td>@(Projects.FirstOrDefault(p => p.Id == task.ProjectId)?.Name ?? "-")</td>
+                    <td>@(People.FirstOrDefault(p => p.EmployeeId == task.AssignedToId)?.Name ?? "-")</td>
                     <td>@task.DueDate.ToShortDateString()</td>
                     <td>
-                        <select class="form-select" value="@task.Status" @onchange="@(e => UpdateTaskStatus((task, e.Value?.ToString() ?? task.Status)))">
+                        <select class="form-select" value="@task.Status"
+                            @onchange="@(e => UpdateTaskStatus((task, e.Value?.ToString() ?? task.Status)))">
                             <option value="Todo">To Do</option>
                             <option value="InProgress">In Progress</option>
                             <option value="Done">Done</option>
@@ -47,7 +63,8 @@ else
                     <td><span class="badge bg-@GetPriorityColor(task.Priority)">@task.Priority</span></td>
                     <td>
                         <div class="dropdown">
-                            <button class="btn btn-link p-0 actions-dropdown-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <button class="btn btn-link p-0 actions-dropdown-btn" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
                                 <i class="bi bi-three-dots-vertical"></i>
                             </button>
                             <ul class="dropdown-menu">
@@ -60,14 +77,23 @@ else
             }
         </tbody>
     </table>
+
+    <CreateProjectModal @ref="createProjectModal" OnSubmitSuccess="HandleProjectCreated" />
+    <CreateTaskModal @ref="createTaskModal" OnSubmitSuccess="LoadTasks" />
 }
 
 @code {
+    private string? selectedProjectId;
+    private CreateProjectModal? createProjectModal;
     private CreateTaskModal? createTaskModal;
     private List<Shared.Models.Task> Tasks = new();
+    private List<ProjectModel> Projects = new();
+    private List<PersonBase> People = new();
 
     protected override async System.Threading.Tasks.Task OnInitializedAsync()
     {
+        await LoadProjects();
+        await LoadPeople();
         await LoadTasks();
     }
 
@@ -95,7 +121,9 @@ else
         var tasks = await client.GetFromJsonAsync<List<Shared.Models.Task>>("api/Tasks");
         if (tasks != null)
         {
-            Tasks = tasks;
+            Console.WriteLine($"Selected Project ID: {selectedProjectId}"); // Debug statement
+            Tasks = tasks.Where(t => string.IsNullOrEmpty(selectedProjectId) ||
+            t.ProjectId == selectedProjectId).ToList();
             StateHasChanged();
         }
     }
@@ -108,5 +136,37 @@ else
     private async System.Threading.Tasks.Task DeleteTask(Shared.Models.Task task)
     {
         // Implement delete functionality
+    }
+
+    private async System.Threading.Tasks.Task LoadProjects()
+    {
+        var client = ClientFactory.CreateClient("BackendAPI");
+        var projects = await client.GetFromJsonAsync<List<ProjectModel>>("api/Projects");
+        if (projects != null)
+        {
+            Projects = projects;
+        }
+    }
+
+    private async System.Threading.Tasks.Task LoadPeople()
+    {
+        var client = ClientFactory.CreateClient("BackendAPI");
+        var people = await client.GetFromJsonAsync<List<PersonBase>>("api/People");
+        if (people != null)
+        {
+            People = people;
+        }
+    }
+
+    private async System.Threading.Tasks.Task HandleProjectCreated()
+    {
+        await LoadProjects();
+        await LoadTasks();
+    }
+
+    private async System.Threading.Tasks.Task HandleProjectSelectionChange(ChangeEventArgs e)
+    {
+        selectedProjectId = e.Value?.ToString();
+        await LoadTasks();
     }
 }

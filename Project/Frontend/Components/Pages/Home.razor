@@ -6,24 +6,24 @@
 
 <PageTitle>Dashboard</PageTitle>
 
-<h1 class="dashboard-title">Dashboard</h1>
-<p class="dashboard-subtitle">Track and analyze waste data and CO2 emissions</p>
+<h1 class="dashboard-title">Task Dashboard</h1>
+<p class="dashboard-subtitle">Track and manage your tasks and projects</p>
 
-<!-- Flex container for Line Chart and Bar Chart -->
+<!-- Flex container for Line Chart and Pie Chart -->
 <div class="chart-section-row">
-    <!-- Line Chart for CO2 Emissions Over Time -->
+    <!-- Line Chart for Tasks Over Time -->
     <div class="chart-section">
-        <h3 class="chart-title">CO2 Emissions Over Last 7 Days</h3>
-        @if (isInitialized && wasteReports.Count > 0)
+        <h3 class="chart-title">Tasks Created Over Last 7 Days</h3>
+        @if (isInitialized && tasks.Count > 0)
         {
             <LineChart @ref="lineChart" Width="750" Height="300" style="width: 800px;" />
         }
     </div>
 
-    <!-- Pie Chart for Waste Type Distribution -->
+    <!-- Pie Chart for Task Status Distribution -->
     <div class="chart-section">
-        <h3 class="chart-title">Waste Type Distribution (kg)</h3>
-        @if (isInitialized && wasteReports.Count > 0)
+        <h3 class="chart-title">Task Status Distribution</h3>
+        @if (isInitialized && tasks.Count > 0)
         {
             <div class="chart-container">
                 <PieChart @ref="pieChart" Width="300" Height="300" />
@@ -32,10 +32,10 @@
     </div>
 </div>
 
-<!-- Stacked Bar Chart for Waste Collection Trends -->
+<!-- Bar Chart for Task Priority Distribution -->
 <div class="chart-section">
-    <h3 class="chart-title">Waste Collection Trends</h3>
-    @if (isInitialized && wasteReports.Count > 0)
+    <h3 class="chart-title">Tasks by Priority</h3>
+    @if (isInitialized && tasks.Count > 0)
     {
         <div class="chart-container">
             <BarChart @ref="barChart" Width="1180" Height="300" />
@@ -44,7 +44,7 @@
 </div>
 
 @code {
-    private List<WasteReport> wasteReports = new();
+    private List<Shared.Models.Task> tasks = new();
     private bool isInitialized = false;
     private bool isInitializedOnce = false;
     private LineChart lineChart = default!;
@@ -69,11 +69,11 @@
         try
         {
             var client = ClientFactory.CreateClient("BackendAPI");
-            var reportResponse = await client.GetFromJsonAsync<List<WasteReport>>("api/WasteReports/");
+            var taskResponse = await client.GetFromJsonAsync<List<Shared.Models.Task>>("api/Tasks/");
 
-            if (reportResponse != null && reportResponse.Any())
+            if (taskResponse != null && taskResponse.Any())
             {
-                wasteReports = reportResponse.OrderBy(report => report.WasteDate).ToList();
+                tasks = taskResponse.OrderBy(task => task.CreatedOn).ToList();
                 GenerateLineChart();
                 GeneratePieChart();
                 GenerateBarChart();
@@ -85,7 +85,7 @@
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Error loading waste reports: {ex.Message}");
+            Console.WriteLine($"Error loading tasks: {ex.Message}");
         }
         finally
         {
@@ -102,26 +102,26 @@
         var sevenDaysAgo = DateTime.Now.Date.AddDays(-7);
 
         // Filter data for the last 7 days and group by date
-        var groupedData = wasteReports
-            .Where(r => r.WasteDate.Date >= sevenDaysAgo) // Filter for last 7 days
-            .GroupBy(r => r.WasteDate.Date) // Group by the date part of WasteDate
+        var groupedData = tasks
+            .Where(t => t.CreatedOn.Date >= sevenDaysAgo)
+            .GroupBy(t => t.CreatedOn.Date)
             .Select(g => new
             {
                 Date = g.Key,
-                TotalCo2Emission = g.Sum(r => r.Co2Emission ?? 0) // Sum CO2 emissions, handling nulls
+                TaskCount = g.Count()
             })
-            .OrderBy(g => g.Date) // Ensure dates are in ascending order
+            .OrderBy(g => g.Date)
             .ToList();
 
         // Extract labels and data from grouped results
         var labels = groupedData.Select(g => g.Date.ToString("dd-MM-yyyy")).ToList();
-        var co2EmissionData = groupedData.Select(g => (double?)g.TotalCo2Emission).ToList(); // Convert to nullable double
+        var taskCountData = groupedData.Select(g => (double?)g.TaskCount).ToList();
 
         // Create the dataset for the line chart
         var dataset = new LineChartDataset
         {
-            Label = "CO2 Emissions",
-            Data = co2EmissionData, // Use aggregated data
+            Label = "Tasks Created",
+            Data = taskCountData,
             BackgroundColor = colors[0],
             BorderColor = colors[0],
             BorderWidth = 2,
@@ -138,27 +138,27 @@
         lineChartOptions.Interaction = new Interaction { Mode = InteractionMode.Index };
 
         lineChartOptions.Scales.X!.Title = new ChartAxesTitle { Text = "Date", Display = true };
-        lineChartOptions.Scales.Y!.Title = new ChartAxesTitle { Text = "CO2 Emissions (kg)", Display = true };
+        lineChartOptions.Scales.Y!.Title = new ChartAxesTitle { Text = "Number of Tasks", Display = true };
     }
 
     private void GeneratePieChart()
     {
         var colors = ColorUtility.CategoricalTwelveColors;
-        var wasteTypeGroups = wasteReports.GroupBy(r => r.WasteType)
-            .Select(g => new { WasteType = g.Key, Amount = g.Sum(r => r.WasteAmount) })
+        var statusGroups = tasks.GroupBy(t => t.Status)
+            .Select(g => new { Status = g.Key, Count = g.Count() })
             .ToList();
 
         pieChartData = new ChartData
         {
-            Labels = wasteTypeGroups.Select(g => g.WasteType).ToList(),
+            Labels = statusGroups.Select(g => g.Status).ToList(),
             Datasets = new List<IChartDataset>
             {
                 new PieChartDataset
                 {
-                    Label = "Waste Type Distribution",
-                    Data = wasteTypeGroups.Select(g => (double?)g.Amount).ToList(),
-                    BackgroundColor = colors.Take(wasteTypeGroups.Count).ToList(),
-                    HoverBackgroundColor = colors.Take(wasteTypeGroups.Count).ToList()
+                    Label = "Task Status Distribution",
+                    Data = statusGroups.Select(g => (double?)g.Count).ToList(),
+                    BackgroundColor = colors.Take(statusGroups.Count).ToList(),
+                    HoverBackgroundColor = colors.Take(statusGroups.Count).ToList()
                 }
             }
         };
@@ -167,47 +167,34 @@
     private void GenerateBarChart()
     {
         var colors = ColorUtility.CategoricalTwelveColors;
-        var facilities = wasteReports.Select(r => r.WasteProcessingFacility).Distinct().ToList();
-        var wasteTypes = wasteReports.Select(r => r.WasteType).Distinct().ToList();
+        var priorityGroups = tasks.GroupBy(t => t.Priority)
+            .Select(g => new { Priority = g.Key, Count = g.Count() })
+            .OrderBy(g => g.Priority)
+            .ToList();
 
-        var datasets = new List<IChartDataset>();
-        int colorIndex = 0;
-
-        foreach (var wasteType in wasteTypes)
+        barChartData = new ChartData
         {
-            var dataset = new BarChartDataset()
+            Labels = priorityGroups.Select(g => g.Priority).ToList(),
+            Datasets = new List<IChartDataset>
             {
-                Label = wasteType,
-                Data = facilities.Select(facility => (double?)wasteReports
-                    .Where(r => r.WasteProcessingFacility == facility && r.WasteType == wasteType)
-                    .Sum(r => r.WasteAmount))
-                    .ToList(),
-                BackgroundColor = new List<string> { colors[(colorIndex % colors.Length)] },
-                BorderColor = new List<string> { colors[(colorIndex % colors.Length)] },
-                BorderWidth = new List<double> { 0 }
-            };
-
-            datasets.Add(dataset);
-            colorIndex++;
-        }
-
-        barChartData = new ChartData { Labels = facilities, Datasets = datasets };
+                new BarChartDataset
+                {
+                    Label = "Tasks by Priority",
+                    Data = priorityGroups.Select(g => (double?)g.Count).ToList(),
+                    BackgroundColor = colors.Take(priorityGroups.Count).ToList(),
+                    BorderColor = colors.Take(priorityGroups.Count).ToList(),
+                    BorderWidth = new List<double> { 0 }
+                }
+            }
+        };
 
         barChartOptions = new();
         barChartOptions.Responsive = true;
-        barChartOptions.Interaction = new Interaction { Mode = InteractionMode.Y };
-        barChartOptions.IndexAxis = "y";
+        barChartOptions.Interaction = new Interaction { Mode = InteractionMode.Index };
 
-        barChartOptions.Scales.X!.Title = new ChartAxesTitle { Text = "Waste Amount (kg)", Display = true };
-        barChartOptions.Scales.Y!.Title = new ChartAxesTitle { Text = "Processing Facility", Display = true };
-
-        barChartOptions.Scales.X.Stacked = true;
-        barChartOptions.Scales.Y.Stacked = true;
-
-        barChartOptions.Plugins.Title!.Text = "Waste Type";
-        barChartOptions.Plugins.Title.Display = true;
+        barChartOptions.Scales.X!.Title = new ChartAxesTitle { Text = "Priority Level", Display = true };
+        barChartOptions.Scales.Y!.Title = new ChartAxesTitle { Text = "Number of Tasks", Display = true };
     }
-
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
@@ -237,5 +224,4 @@
         }
         await base.OnAfterRenderAsync(firstRender);
     }
-
 }

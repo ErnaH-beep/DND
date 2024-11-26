@@ -19,21 +19,6 @@ namespace Project.Backend.Controllers
             _logger = logger;
         }
 
-        [HttpGet("project/{projectId}")]
-        public async Task<ActionResult<List<Shared.Models.Task>>> GetProjectTasks(string projectId)
-        {
-            try
-            {
-                var tasks = await _taskService.GetTasksByProject(projectId);
-                return Ok(tasks);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error retrieving project tasks");
-                return StatusCode(500, "An error occurred while processing your request.");
-            }
-        }
-
         [HttpPost]
         public async Task<IActionResult> CreateTask([FromBody] Shared.Models.Task task)
         {

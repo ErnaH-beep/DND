@@ -31,6 +31,28 @@
                 </InputSelect>
             </div>
 
+            <div class="mb-3">
+                <label for="project" class="form-label">Project</label>
+                <InputSelect id="project" class="form-select" @bind-Value="newTask.ProjectId">
+                    <option value="">-- Select Project --</option>
+                    @foreach (var project in Projects)
+                    {
+                        <option value="@project.Id">@project.Name</option>
+                    }
+                </InputSelect>
+            </div>
+
+            <div class="mb-3">
+                <label for="assignee" class="form-label">Assign To</label>
+                <InputSelect id="assignee" class="form-select" @bind-Value="newTask.AssignedToId">
+                    <option value="">-- Select Assignee --</option>
+                    @foreach (var person in People)
+                    {
+                        <option value="@person.EmployeeId">@person.Name</option>
+                    }
+                </InputSelect>
+            </div>
+
             <button type="submit" class="btn btn-primary w-100">Create Task</button>
         </EditForm>
     </BodyTemplate>
@@ -57,6 +79,16 @@
     private Modal createTaskModal = default!;
     private string? message;
     private string messageClass = string.Empty;
+    private List<ProjectModel> Projects = new();
+    private List<PersonBase> People = new();
+
+    protected override async System.Threading.Tasks.Task OnInitializedAsync()
+    {
+        var client = ClientFactory.CreateClient("BackendAPI");
+        Projects = await client.GetFromJsonAsync<List<ProjectModel>>("api/Projects") ?? new();
+        var allPeople = await client.GetFromJsonAsync<List<PersonBase>>("api/People") ?? new();
+        People = allPeople.Where(p => p.IsActive).ToList();
+    }
 
     public async System.Threading.Tasks.Task ShowModal()
     {
@@ -68,6 +100,11 @@
             IsActive = true
         };
         message = null;
+        
+        // Reload projects when modal is shown
+        var client = ClientFactory.CreateClient("BackendAPI");
+        Projects = await client.GetFromJsonAsync<List<ProjectModel>>("api/Projects") ?? new();
+        
         await createTaskModal.ShowAsync();
     }
 

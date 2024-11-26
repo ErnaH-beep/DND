@@ -1,0 +1,68 @@
+@inject IHttpClientFactory ClientFactory
+@using Shared.Models
+
+<Modal @ref="createProjectModal" title="Create New Project" IsVerticallyCentered="true" UseStaticBackdrop="true" CloseOnEscape="false">
+    <BodyTemplate>
+        <EditForm Model="@newProject" OnValidSubmit="@HandleSubmit">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+
+            <div class="mb-3">
+                <label for="name" class="form-label">Project Name</label>
+                <InputText id="name" class="form-control" @bind-Value="newProject.Name" />
+            </div>
+
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <InputTextArea id="description" class="form-control" @bind-Value="newProject.Description" rows="3" />
+            </div>
+
+            <div class="mb-3">
+                <label for="startDate" class="form-label">Start Date</label>
+                <InputDate id="startDate" class="form-control" @bind-Value="newProject.StartDate" />
+            </div>
+
+            <div class="mb-3">
+                <label for="endDate" class="form-label">End Date</label>
+                <InputDate id="endDate" class="form-control" @bind-Value="newProject.EndDate" />
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Create Project</button>
+        </EditForm>
+    </BodyTemplate>
+</Modal>
+
+@code {
+    [Parameter] public EventCallback OnSubmitSuccess { get; set; }
+
+    private ProjectModel newProject = new()
+    {
+        StartDate = DateTime.Now,
+        EndDate = DateTime.Now.AddMonths(1),
+        Status = "Active"
+    };
+    private Modal createProjectModal = default!;
+
+    public async System.Threading.Tasks.Task ShowModal()
+    {
+        newProject = new()
+        {
+            StartDate = DateTime.Now,
+            EndDate = DateTime.Now.AddMonths(1),
+            Status = "Active"
+        };
+        await createProjectModal.ShowAsync();
+    }
+
+    private async System.Threading.Tasks.Task HandleSubmit()
+    {
+        var client = ClientFactory.CreateClient("BackendAPI");
+        var response = await client.PostAsJsonAsync("api/Projects", newProject);
+
+        if (response.IsSuccessStatusCode)
+        {
+            await createProjectModal.HideAsync();
+            await OnSubmitSuccess.InvokeAsync();
+        }
+    }
+} 

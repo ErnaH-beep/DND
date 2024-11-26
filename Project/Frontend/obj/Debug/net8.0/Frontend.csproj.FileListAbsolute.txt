@@ -1,4 +1,3 @@
-D:\Code\C#\SepProject\Project\Frontend\bin\Debug\net8.0\Data\WasteProcessing.json
 D:\Code\C#\SepProject\Project\Frontend\bin\Debug\net8.0\appsettings.Development.json
 D:\Code\C#\SepProject\Project\Frontend\bin\Debug\net8.0\appsettings.json
 D:\Code\C#\SepProject\Project\Frontend\bin\Debug\net8.0\Frontend.staticwebassets.runtime.json
@@ -53,15 +52,11 @@ D:\Code\C#\SepProject\Project\Frontend\obj\Debug\net8.0\scopedcss\Components\Com
 D:\Code\C#\SepProject\Project\Frontend\obj\Debug\net8.0\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
 D:\Code\C#\SepProject\Project\Frontend\obj\Debug\net8.0\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
 D:\Code\C#\SepProject\Project\Frontend\obj\Debug\net8.0\scopedcss\Components\Modals\EditUserModal.razor.rz.scp.css
-D:\Code\C#\SepProject\Project\Frontend\obj\Debug\net8.0\scopedcss\Components\Modals\EditWasteReportModal.razor.rz.scp.css
-D:\Code\C#\SepProject\Project\Frontend\obj\Debug\net8.0\scopedcss\Components\Modals\NewWasteReportModal.razor.rz.scp.css
 D:\Code\C#\SepProject\Project\Frontend\obj\Debug\net8.0\scopedcss\Components\Modals\RegisterUserModal.razor.rz.scp.css
 D:\Code\C#\SepProject\Project\Frontend\obj\Debug\net8.0\scopedcss\Components\Pages\Home.razor.rz.scp.css
 D:\Code\C#\SepProject\Project\Frontend\obj\Debug\net8.0\scopedcss\Components\Pages\LandingPage.razor.rz.scp.css
 D:\Code\C#\SepProject\Project\Frontend\obj\Debug\net8.0\scopedcss\Components\Pages\Login.razor.rz.scp.css
 D:\Code\C#\SepProject\Project\Frontend\obj\Debug\net8.0\scopedcss\Components\Pages\ManageUsers.razor.rz.scp.css
-D:\Code\C#\SepProject\Project\Frontend\obj\Debug\net8.0\scopedcss\Components\Pages\ResyclingTips.razor.rz.scp.css
-D:\Code\C#\SepProject\Project\Frontend\obj\Debug\net8.0\scopedcss\Components\Pages\WasteAnalytics.razor.rz.scp.css
 D:\Code\C#\SepProject\Project\Frontend\obj\Debug\net8.0\scopedcss\bundle\Frontend.styles.css
 D:\Code\C#\SepProject\Project\Frontend\obj\Debug\net8.0\scopedcss\projectbundle\Frontend.bundle.scp.css
 D:\Code\C#\SepProject\Project\Frontend\obj\Debug\net8.0\Frontend.csproj.Up2Date

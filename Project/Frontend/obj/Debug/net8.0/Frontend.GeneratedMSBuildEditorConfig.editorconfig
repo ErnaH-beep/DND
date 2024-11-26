@@ -26,12 +26,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcRW1wdHlMYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Code/C\#/SepProject/Project/Frontend/Components/Modals/CreateTaskModal.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNb2RhbHNcQ3JlYXRlVGFza01vZGFsLnJhem9y
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Modals/CreateProjectModal.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNb2RhbHNcQ3JlYXRlUHJvamVjdE1vZGFsLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Code/C\#/SepProject/Project/Frontend/Components/Modals/DeleteReportModal.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNb2RhbHNcRGVsZXRlUmVwb3J0TW9kYWwucmF6b3I=
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Modals/CreateTaskModal.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNb2RhbHNcQ3JlYXRlVGFza01vZGFsLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Code/C\#/SepProject/Project/Frontend/Components/Modals/DeleteUserModal.razor]
@@ -66,14 +66,6 @@ build_metadata.AdditionalFiles.CssScope = b-ftcrkoicqg
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNb2RhbHNcRWRpdFVzZXJNb2RhbC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-1wajpc3zzi
 
-[D:/Code/C\#/SepProject/Project/Frontend/Components/Modals/EditWasteReportModal.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNb2RhbHNcRWRpdFdhc3RlUmVwb3J0TW9kYWwucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-493uouoigd
-
-[D:/Code/C\#/SepProject/Project/Frontend/Components/Modals/NewWasteReportModal.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNb2RhbHNcTmV3V2FzdGVSZXBvcnRNb2RhbC5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = b-u7qo937b3u
-
 [D:/Code/C\#/SepProject/Project/Frontend/Components/Modals/RegisterUserModal.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNb2RhbHNcUmVnaXN0ZXJVc2VyTW9kYWwucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-cx3k8xz3k1
@@ -94,14 +86,6 @@ build_metadata.AdditionalFiles.CssScope = b-1j1h6k9ujg
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNYW5hZ2VVc2Vycy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-pkwo8k5cy3
 
-[D:/Code/C\#/SepProject/Project/Frontend/Components/Pages/ResyclingTips.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xSZXN5Y2xpbmdUaXBzLnJhem9y
-build_metadata.AdditionalFiles.CssScope = b-d8tezygva6
-
 [D:/Code/C\#/SepProject/Project/Frontend/Components/Pages/TaskBoard.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xUYXNrQm9hcmQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-ut32s5viqw
-
-[D:/Code/C\#/SepProject/Project/Frontend/Components/Pages/WasteAnalytics.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXYXN0ZUFuYWx5dGljcy5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = b-nrfauk4478
