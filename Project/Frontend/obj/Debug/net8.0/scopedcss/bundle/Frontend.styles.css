@@ -372,6 +372,84 @@ button[b-cx3k8xz3k1] {
     text-align: center;
     color: #333;
 }
+/* _content/Frontend/Components/Pages/KanbanBoard.razor.rz.scp.css */
+.kanban-board[b-o96b1rmi93] {
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.board-columns[b-o96b1rmi93] {
+    display: flex;
+    gap: 20px;
+    min-height: 600px;
+}
+
+.column[b-o96b1rmi93] {
+    flex: 1;
+    min-width: 300px;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.column-todo[b-o96b1rmi93] {
+    background-color: #fff3e0;
+    border-top: 3px solid #ff9800;
+}
+
+.column-inprogress[b-o96b1rmi93] {
+    background-color: #e3f2fd;
+    border-top: 3px solid #2196f3;
+}
+
+.column-done[b-o96b1rmi93] {
+    background-color: #e8f5e9;
+    border-top: 3px solid #4caf50;
+}
+
+.task-container[b-o96b1rmi93] {
+    min-height: 100px;
+}
+
+.task-card[b-o96b1rmi93] {
+    background: white;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    user-select: none;
+}
+
+.task-card.draggable[b-o96b1rmi93] {
+    cursor: grab;
+    transition: transform 0.2s ease;
+}
+
+.task-card.draggable:active[b-o96b1rmi93] {
+    cursor: grabbing;
+    transform: scale(1.02);
+    background-color: #fafafaf8;
+}
+
+.task-card.non-draggable[b-o96b1rmi93] {
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.project-tag[b-o96b1rmi93] {
+    background: #e0e0e0;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    margin: 4px 0;
+}
+
+.task-footer[b-o96b1rmi93] {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    font-size: 0.8em;
+    color: #666;
+}
 /* _content/Frontend/Components/Pages/LandingPage.razor.rz.scp.css */
 *[b-1uetml2cpj] {
     font-family: "Afacad Flux", sans-serif;

@@ -1,0 +1,77 @@
+.kanban-board {
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.board-columns {
+    display: flex;
+    gap: 20px;
+    min-height: 600px;
+}
+
+.column {
+    flex: 1;
+    min-width: 300px;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.column-todo {
+    background-color: #fff3e0;
+    border-top: 3px solid #ff9800;
+}
+
+.column-inprogress {
+    background-color: #e3f2fd;
+    border-top: 3px solid #2196f3;
+}
+
+.column-done {
+    background-color: #e8f5e9;
+    border-top: 3px solid #4caf50;
+}
+
+.task-container {
+    min-height: 100px;
+}
+
+.task-card {
+    background: white;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    user-select: none;
+}
+
+.task-card.draggable {
+    cursor: grab;
+    transition: transform 0.2s ease;
+}
+
+.task-card.draggable:active {
+    cursor: grabbing;
+    transform: scale(1.02);
+    background-color: #fafafaf8;
+}
+
+.task-card.non-draggable {
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.project-tag {
+    background: #e0e0e0;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    margin: 4px 0;
+}
+
+.task-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    font-size: 0.8em;
+    color: #666;
+}

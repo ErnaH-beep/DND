@@ -107,10 +107,10 @@ else
         try
         {
             var client = ClientFactory.CreateClient("BackendAPI");
-            var response = await client.GetFromJsonAsync<List<PersonBase>>("api/People?active=true"); // Filter on the server side
+            var response = await client.GetFromJsonAsync<List<PersonBase>>("api/People?active=true");
             if (response != null)
             {
-                users = response.Where(user => user.IsActive).ToList(); // Filter on the client side if needed
+                users = response.Where(user => user.IsActive).ToList();
             }
         }
         catch (Exception ex)

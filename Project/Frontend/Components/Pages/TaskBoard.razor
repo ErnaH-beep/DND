@@ -1,25 +1,30 @@
 @page "/tasks"
 @inject IHttpClientFactory ClientFactory
 @inject NavigationManager NavigationManager
+@inject ILocalStorageService LocalStorage
 @using Shared.Models
 
-<div class="d-flex justify-content-between align-items-center">
-    <h3>Task Board</h3>
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h3 class="mb-0">Task Board</h3>
     <select class="form-select w-25" @onchange="HandleProjectSelectionChange">
         <option value="">All Tasks</option>
+        <option value="@EmployeeId">My Tasks</option>
         @foreach (var project in Projects)
         {
             <option value="@project.Id">@project.Name</option>
         }
     </select>
-    <div class="d-flex align-items-center">
-        <button class="btn btn-primary mb-3 me-2" @onclick="async () => await createProjectModal.ShowModal()">
-            <i class="bi bi-folder-plus"></i> New Project
-        </button>
-        <button class="btn btn-primary mb-3" @onclick="async () => await createTaskModal.ShowModal()">
-            <i class="bi bi-plus"></i> Add New Task
-        </button>
-    </div>
+    @if (UserRole == "Manager")
+    {
+        <div class="d-flex align-items-center">
+            <button class="btn btn-primary me-2" @onclick="async () => await createProjectModal.ShowModal()">
+                <i class="bi bi-folder-plus"></i> New Project
+            </button>
+            <button class="btn btn-primary" @onclick="async () => await createTaskModal.ShowModal()">
+                <i class="bi bi-plus"></i> Add New Task
+            </button>
+        </div>
+    }
 </div>
 
 @if (Tasks.Count == 0)
@@ -53,7 +58,8 @@ else
                     <td>@(People.FirstOrDefault(p => p.EmployeeId == task.AssignedToId)?.Name ?? "-")</td>
                     <td>@task.DueDate.ToShortDateString()</td>
                     <td>
-                        <select class="form-select" value="@task.Status"
+                        <select disabled="@(UserRole != "Manager" && task.AssignedToId != EmployeeId)" class="form-select"
+                            value="@task.Status"
                             @onchange="@(e => UpdateTaskStatus((task, e.Value?.ToString() ?? task.Status)))">
                             <option value="Todo">To Do</option>
                             <option value="InProgress">In Progress</option>
@@ -62,16 +68,19 @@ else
                     </td>
                     <td><span class="badge bg-@GetPriorityColor(task.Priority)">@task.Priority</span></td>
                     <td>
-                        <div class="dropdown">
-                            <button class="btn btn-link p-0 actions-dropdown-btn" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <i class="bi bi-three-dots-vertical"></i>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><button class="dropdown-item" @onclick="() => EditTask(task)">Edit</button></li>
-                                <li><button class="dropdown-item" @onclick="() => DeleteTask(task)">Delete</button></li>
-                            </ul>
-                        </div>
+                        @if (UserRole == "Manager" || task.AssignedToId == EmployeeId)
+                        {
+                            <div class="dropdown">
+                                <button class="btn btn-link p-0 actions-dropdown-btn" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <i class="bi bi-three-dots-vertical"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><button class="dropdown-item" @onclick="() => EditTask(task)">Edit</button></li>
+                                    <li><button class="dropdown-item" @onclick="() => DeleteTask(task)">Delete</button></li>
+                                </ul>
+                            </div>
+                        }
                     </td>
                 </tr>
             }
@@ -83,6 +92,9 @@ else
 }
 
 @code {
+    private string? UserRole { get; set; }
+    private string? EmployeeId { get; set; }
+    private bool isFirstRender = true;
     private string? selectedProjectId;
     private CreateProjectModal? createProjectModal;
     private CreateTaskModal? createTaskModal;
@@ -95,6 +107,17 @@ else
         await LoadProjects();
         await LoadPeople();
         await LoadTasks();
+    }
+
+    protected override async System.Threading.Tasks.Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            // Retrieve the role from local storage
+            UserRole = await LocalStorage.GetItemAsync<string>("userRole");
+            EmployeeId = await LocalStorage.GetItemAsync<string>("employeeId");
+            StateHasChanged(); // Trigger re-render after loading the role
+        }
     }
 
     private string GetPriorityColor(string priority) => priority switch
@@ -121,9 +144,15 @@ else
         var tasks = await client.GetFromJsonAsync<List<Shared.Models.Task>>("api/Tasks");
         if (tasks != null)
         {
-            Console.WriteLine($"Selected Project ID: {selectedProjectId}"); // Debug statement
-            Tasks = tasks.Where(t => string.IsNullOrEmpty(selectedProjectId) ||
-            t.ProjectId == selectedProjectId).ToList();
+            Tasks = tasks.Where(t =>
+            {
+                if (string.IsNullOrEmpty(selectedProjectId))
+                    return true;
+                else if (selectedProjectId == EmployeeId)
+                    return t.AssignedToId == EmployeeId;
+                else
+                    return t.ProjectId == selectedProjectId;
+            }).ToList();
             StateHasChanged();
         }
     }
@@ -135,7 +164,7 @@ else
 
     private async System.Threading.Tasks.Task DeleteTask(Shared.Models.Task task)
     {
-        // Implement delete functionality
+        
     }
 
     private async System.Threading.Tasks.Task LoadProjects()

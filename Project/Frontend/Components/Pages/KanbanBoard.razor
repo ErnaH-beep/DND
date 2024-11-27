@@ -1,0 +1,148 @@
+@page "/kanban-board"
+@inject IHttpClientFactory ClientFactory
+@inject NavigationManager NavigationManager
+@inject ILocalStorageService LocalStorage
+@using Shared.Models
+
+<div class="kanban-board">
+    <div class="board-columns">
+        @foreach (var status in Statuses)
+        {
+            <div class="column @($"column-{status.ToLower()}")">
+                <h3>@status</h3>
+                <div class="task-container" ondragover="event.preventDefault()"
+                    @ondrop="@(async () => await OnDrop(status))" @ondragover:preventDefault>
+                    @foreach (var task in Tasks.Where(t => t.Status == status))
+                    {
+                        var canDrag = UserRole == "Manager" || task.AssignedToId == EmployeeId;
+                        
+                        <div class="task-card @(canDrag ? "draggable" : "non-draggable")" draggable="@canDrag.ToString()" @ondragstart="@(() => OnDragStart(task))">
+                            <h4>@task.Title</h4>
+                            @if (!string.IsNullOrEmpty(task.ProjectId))
+                            {
+                                var project = Projects.FirstOrDefault(p => p.Id == task.ProjectId);
+                                @if (project != null)
+                                {
+                                    <div class="project-tag">@project.Name</div>
+                                }
+                            }
+                            <p>@task.Description</p>
+                            <div class="task-footer">
+                                <span class="due-date">@task.DueDate.ToShortDateString()</span>
+                                @if (!string.IsNullOrEmpty(task.AssignedToId))
+                                {
+                                    var person = People.FirstOrDefault(p => p.EmployeeId == task.AssignedToId);
+                                    <span class="assigned-to">@(person?.Name ?? "-")</span>
+                                }
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@code {
+    private List<string> Statuses = new() { "Todo", "InProgress", "Done" };
+    private List<Shared.Models.Task> Tasks = new();
+    private List<ProjectModel> Projects = new();
+    private List<PersonBase> People = new();
+    private Shared.Models.Task? draggedTask;
+    private string? UserRole { get; set; }
+    private string? EmployeeId { get; set; }
+    private bool isInitialized = false;
+
+    protected override async System.Threading.Tasks.Task OnInitializedAsync()
+    {
+        var client = ClientFactory.CreateClient("BackendAPI");
+        try
+        {
+            Tasks = await client.GetFromJsonAsync<List<Shared.Models.Task>>("api/Tasks") ?? new();
+            Projects = await client.GetFromJsonAsync<List<ProjectModel>>("api/Projects") ?? new();
+            await LoadPeople();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading data: {ex.Message}");
+        }
+    }
+
+    protected override async System.Threading.Tasks.Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            try
+            {
+                UserRole = await LocalStorage.GetItemAsync<string>("userRole");
+                EmployeeId = await LocalStorage.GetItemAsync<string>("employeeId");
+                isInitialized = true;
+                StateHasChanged(); 
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error accessing LocalStorage: {ex.Message}");
+            }
+        }
+    }
+
+    private void OnDragStart(Shared.Models.Task task)
+    {
+        draggedTask = task;
+    }
+
+    private async System.Threading.Tasks.Task OnDrop(string newStatus)
+    {
+        if (draggedTask == null) return;
+
+        var oldStatus = draggedTask.Status;
+        if (oldStatus == newStatus) return;
+
+        draggedTask.Status = newStatus;
+
+        var client = ClientFactory.CreateClient("BackendAPI");
+        try
+        {
+            // Send only the new status as the body
+            await client.PutAsJsonAsync($"api/Tasks/{draggedTask.Id}/status", newStatus);
+            await LoadTasks(); // Reload tasks after successful update
+        }
+        catch (Exception ex)
+        {
+            // Handle error and possibly revert the status
+            draggedTask.Status = oldStatus;
+            Console.WriteLine($"Error updating task status: {ex.Message}");
+        }
+
+        draggedTask = null;
+    }
+
+    // Add this method to reload tasks
+    private async System.Threading.Tasks.Task LoadTasks()
+    {
+        var client = ClientFactory.CreateClient("BackendAPI");
+        try
+        {
+            Tasks = await client.GetFromJsonAsync<List<Shared.Models.Task>>("api/Tasks") ?? new();
+            await LoadPeople();
+            StateHasChanged();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading tasks: {ex.Message}");
+        }
+    }
+
+    private async System.Threading.Tasks.Task LoadPeople()
+    {
+        var client = ClientFactory.CreateClient("BackendAPI");
+        try
+        {
+            People = await client.GetFromJsonAsync<List<PersonBase>>("api/People") ?? new();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading people: {ex.Message}");
+        }
+    }
+}
