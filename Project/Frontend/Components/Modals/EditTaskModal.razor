@@ -100,7 +100,7 @@
         try
         {
             var client = ClientFactory.CreateClient("BackendAPI");
-            editTask = await client.GetFromJsonAsync<Shared.Models.Task>($"api/Task/{TaskId}");
+            editTask = await client.GetFromJsonAsync<Shared.Models.Task>($"api/Tasks/{TaskId}");
 
             if (editTask == null)
             {
@@ -119,7 +119,7 @@
         try
         {
             var client = ClientFactory.CreateClient("BackendAPI");
-            var response = await client.PutAsJsonAsync($"api/Task/{editTask!.Id}", editTask);
+            var response = await client.PutAsJsonAsync($"api/Tasks/{editTask!.Id}", editTask);
 
             if (response.IsSuccessStatusCode)
             {

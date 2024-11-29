@@ -145,3 +145,4 @@ C:\Users\Thoma\OneDrive - ViaUC\Global Business Engineering\7th Semester\DND\C# 
 C:\Users\Thoma\OneDrive - ViaUC\Global Business Engineering\7th Semester\DND\C# Project\project\frontend\obj\Debug\net8.0\Frontend.genruntimeconfig.cache
 C:\Users\Thoma\OneDrive - ViaUC\Global Business Engineering\7th Semester\DND\C# Project\project\frontend\obj\Debug\net8.0\ref\Frontend.dll
 C:\Users\Thoma\OneDrive - ViaUC\Global Business Engineering\7th Semester\DND\C# Project\project\frontend\obj\Debug\net8.0\scopedcss\Components\Modals\EditTaskModal.razor.rz.scp.css
+D:\Code\C#\SepProject\Project\Frontend\obj\Debug\net8.0\scopedcss\Components\Modals\EditTaskModal.razor.rz.scp.css

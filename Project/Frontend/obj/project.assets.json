@@ -1671,19 +1671,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Thoma\\.nuget\\packages\\": {}
+    "C:\\Users\\mathi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Thoma\\OneDrive - ViaUC\\Global Business Engineering\\7th Semester\\DND\\C# Project\\project\\frontend\\Frontend.csproj",
+      "projectUniqueName": "D:\\Code\\C#\\SepProject\\Project\\Frontend\\Frontend.csproj",
       "projectName": "Frontend",
-      "projectPath": "C:\\Users\\Thoma\\OneDrive - ViaUC\\Global Business Engineering\\7th Semester\\DND\\C# Project\\project\\frontend\\Frontend.csproj",
-      "packagesPath": "C:\\Users\\Thoma\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Thoma\\OneDrive - ViaUC\\Global Business Engineering\\7th Semester\\DND\\C# Project\\project\\frontend\\obj\\",
+      "projectPath": "D:\\Code\\C#\\SepProject\\Project\\Frontend\\Frontend.csproj",
+      "packagesPath": "C:\\Users\\mathi\\.nuget\\packages\\",
+      "outputPath": "D:\\Code\\C#\\SepProject\\Project\\Frontend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Thoma\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\mathi\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -1695,8 +1695,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Thoma\\OneDrive - ViaUC\\Global Business Engineering\\7th Semester\\DND\\C# Project\\project\\Shared\\Shared.csproj": {
-              "projectPath": "C:\\Users\\Thoma\\OneDrive - ViaUC\\Global Business Engineering\\7th Semester\\DND\\C# Project\\project\\Shared\\Shared.csproj"
+            "D:\\Code\\C#\\SepProject\\Project\\Shared\\Shared.csproj": {
+              "projectPath": "D:\\Code\\C#\\SepProject\\Project\\Shared\\Shared.csproj"
             }
           }
         }
@@ -1709,9 +1709,8 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "all"
-      },
-      "SdkAnalysisLevel": "9.0.100"
+        "auditMode": "direct"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -1765,24 +1764,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.11, 8.0.11]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[8.0.11, 8.0.11]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.11, 8.0.11]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[8.0.11, 8.0.11]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -1791,7 +1772,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

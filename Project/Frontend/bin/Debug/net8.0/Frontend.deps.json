@@ -325,7 +325,14 @@
         }
       },
       "System.Numerics.Vectors/4.5.0": {},
-      "System.Text.Json/8.0.5": {},
+      "System.Text.Json/8.0.5": {
+        "runtime": {
+          "lib/net8.0/System.Text.Json.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.1024.46610"
+          }
+        }
+      },
       "Shared/1.0.0": {
         "dependencies": {
           "Newtonsoft.Json": "13.0.3"

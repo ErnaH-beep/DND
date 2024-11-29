@@ -68,9 +68,9 @@ namespace Project.Backend.Services
                 existingTask.ProjectId = updatedTask.ProjectId;
                 existingTask.AssignedToId = updatedTask.AssignedToId;
                 existingTask.ModifiedOn = DateTime.Now;
-
+                
                 await _dbContext.SaveChangesAsync();
-                return "Success!";
+                return "Success";
             }
             catch (Exception ex) 
             {
@@ -78,6 +78,12 @@ namespace Project.Backend.Services
                 return ex.Message;
             }
             
+        }
+
+        public async Task<Shared.Models.Task?> GetTaskById(int taskId)
+        {
+            return await _dbContext.Tasks
+                .FirstOrDefaultAsync(t => t.Id == taskId && t.IsActive);
         }
     }
 }

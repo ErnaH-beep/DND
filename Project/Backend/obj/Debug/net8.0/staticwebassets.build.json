@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2OuPs9HXDXdaTKr8yFYz0WUFwPT6R+rL4nXtk63ODf8=",
+  "Hash": "Cmk5Gu+OAbc1yZid96jVpbGveqSjr6wooAi4AGGCmbE=",
   "Source": "Backend",
   "BasePath": "_content/Backend",
   "Mode": "Default",
@@ -9,10 +9,10 @@
   "DiscoveryPatterns": [],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Thoma\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\blazor.bootstrap.ai.js",
+      "Identity": "C:\\Users\\mathi\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\blazor.bootstrap.ai.js",
       "SourceId": "Blazor.Bootstrap",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Thoma\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\mathi\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\",
       "BasePath": "_content/Blazor.Bootstrap",
       "RelativePath": "blazor.bootstrap.ai.js",
       "AssetKind": "All",
@@ -23,17 +23,15 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "m4v3m943t1",
-      "Integrity": "qqVhOIiDDbSiSP44XiXacBrWpys+pgsREG/S9PlabcQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Thoma\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\blazor.bootstrap.ai.js"
+      "OriginalItemSpec": "C:\\Users\\mathi\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\blazor.bootstrap.ai.js"
     },
     {
-      "Identity": "C:\\Users\\Thoma\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\Blazor.Bootstrap.bundle.scp.css",
+      "Identity": "C:\\Users\\mathi\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\Blazor.Bootstrap.bundle.scp.css",
       "SourceId": "Blazor.Bootstrap",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Thoma\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\mathi\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\",
       "BasePath": "_content/Blazor.Bootstrap",
       "RelativePath": "Blazor.Bootstrap.bundle.scp.css",
       "AssetKind": "All",
@@ -44,17 +42,15 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "6hez5byeo4",
-      "Integrity": "CgV+hjRfNT1h1EIDIUSslXs3X51gRu0MAkHoIXDNI2M=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Thoma\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\Blazor.Bootstrap.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\mathi\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\Blazor.Bootstrap.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Thoma\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\blazor.bootstrap.css",
+      "Identity": "C:\\Users\\mathi\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\blazor.bootstrap.css",
       "SourceId": "Blazor.Bootstrap",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Thoma\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\mathi\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\",
       "BasePath": "_content/Blazor.Bootstrap",
       "RelativePath": "blazor.bootstrap.css",
       "AssetKind": "All",
@@ -65,17 +61,15 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "a1vdthdqou",
-      "Integrity": "orBjnMbqYwqiTorE8tBVEJr71Jbs42BfIoTTFqqTHlA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Thoma\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\blazor.bootstrap.css"
+      "OriginalItemSpec": "C:\\Users\\mathi\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\blazor.bootstrap.css"
     },
     {
-      "Identity": "C:\\Users\\Thoma\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\blazor.bootstrap.js",
+      "Identity": "C:\\Users\\mathi\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\blazor.bootstrap.js",
       "SourceId": "Blazor.Bootstrap",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Thoma\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\mathi\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\",
       "BasePath": "_content/Blazor.Bootstrap",
       "RelativePath": "blazor.bootstrap.js",
       "AssetKind": "All",
@@ -86,17 +80,15 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "mgojsf1q78",
-      "Integrity": "ajVMnqBMAkGl+pstlYFA4TwJBU1G7yqG5K5q51SUDJU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Thoma\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\blazor.bootstrap.js"
+      "OriginalItemSpec": "C:\\Users\\mathi\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\blazor.bootstrap.js"
     },
     {
-      "Identity": "C:\\Users\\Thoma\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\blazor.bootstrap.pdf.js",
+      "Identity": "C:\\Users\\mathi\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\blazor.bootstrap.pdf.js",
       "SourceId": "Blazor.Bootstrap",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Thoma\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\mathi\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\",
       "BasePath": "_content/Blazor.Bootstrap",
       "RelativePath": "blazor.bootstrap.pdf.js",
       "AssetKind": "All",
@@ -107,17 +99,15 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ct0ej5e0q0",
-      "Integrity": "oAIj2P0Z/6hTwjGA3OGvWLdxMP4KwE35+AQzWQTpxAg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Thoma\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\blazor.bootstrap.pdf.js"
+      "OriginalItemSpec": "C:\\Users\\mathi\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\blazor.bootstrap.pdf.js"
     },
     {
-      "Identity": "C:\\Users\\Thoma\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\blazor.bootstrap.sortable-list.js",
+      "Identity": "C:\\Users\\mathi\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\blazor.bootstrap.sortable-list.js",
       "SourceId": "Blazor.Bootstrap",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Thoma\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\mathi\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\",
       "BasePath": "_content/Blazor.Bootstrap",
       "RelativePath": "blazor.bootstrap.sortable-list.js",
       "AssetKind": "All",
@@ -128,17 +118,15 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ezlxc6gzv3",
-      "Integrity": "du71NM6e2+m9l81ldV+Gbr74ER7Xx1GnJFg+rIY6OQU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Thoma\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\blazor.bootstrap.sortable-list.js"
+      "OriginalItemSpec": "C:\\Users\\mathi\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\blazor.bootstrap.sortable-list.js"
     },
     {
-      "Identity": "C:\\Users\\Thoma\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\icon\\128X128.png",
+      "Identity": "C:\\Users\\mathi\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\icon\\128X128.png",
       "SourceId": "Blazor.Bootstrap",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Thoma\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\mathi\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\",
       "BasePath": "_content/Blazor.Bootstrap",
       "RelativePath": "icon/128X128.png",
       "AssetKind": "All",
@@ -149,17 +137,15 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "tngynhsog2",
-      "Integrity": "J1yB7ftYf6PWiU1781eE0JHBGfd1MV/XlLaxpVy09RU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Thoma\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\icon\\128X128.png"
+      "OriginalItemSpec": "C:\\Users\\mathi\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\icon\\128X128.png"
     },
     {
-      "Identity": "C:\\Users\\Thoma\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\pdfjs-4.0.379.min.js",
+      "Identity": "C:\\Users\\mathi\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\pdfjs-4.0.379.min.js",
       "SourceId": "Blazor.Bootstrap",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Thoma\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\mathi\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\",
       "BasePath": "_content/Blazor.Bootstrap",
       "RelativePath": "pdfjs-4.0.379.min.js",
       "AssetKind": "All",
@@ -170,17 +156,15 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "j8zp7bt7w3",
-      "Integrity": "XX7we2CiSWzj3rsNtKFCod90LBYAJ3bo8rmu4EuN7SQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Thoma\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\pdfjs-4.0.379.min.js"
+      "OriginalItemSpec": "C:\\Users\\mathi\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\pdfjs-4.0.379.min.js"
     },
     {
-      "Identity": "C:\\Users\\Thoma\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\pdfjs-4.0.379.worker.min.js",
+      "Identity": "C:\\Users\\mathi\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\pdfjs-4.0.379.worker.min.js",
       "SourceId": "Blazor.Bootstrap",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Thoma\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\mathi\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\",
       "BasePath": "_content/Blazor.Bootstrap",
       "RelativePath": "pdfjs-4.0.379.worker.min.js",
       "AssetKind": "All",
@@ -191,19 +175,17 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "79hai7knhw",
-      "Integrity": "JbwqIn9Fic7JuWyTXuNnAA1T0dYQ2tkTi9HhrSltUtQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Thoma\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\pdfjs-4.0.379.worker.min.js"
+      "OriginalItemSpec": "C:\\Users\\mathi\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\pdfjs-4.0.379.worker.min.js"
     },
     {
-      "Identity": "C:\\Users\\Thoma\\OneDrive - ViaUC\\Global Business Engineering\\7th Semester\\DND\\C# Project\\project\\backend\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Backend.styles.css",
+      "Identity": "D:\\Code\\C#\\SepProject\\Project\\Backend\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Backend.styles.css",
       "SourceId": "Backend",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Thoma\\OneDrive - ViaUC\\Global Business Engineering\\7th Semester\\DND\\C# Project\\project\\backend\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "D:\\Code\\C#\\SepProject\\Project\\Backend\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/Backend",
-      "RelativePath": "Backend#[.{fingerprint}]?.styles.css",
+      "RelativePath": "Backend.styles.css",
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Primary",
@@ -212,436 +194,9 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "4wh4y5oedl",
-      "Integrity": "bDbOXFZjk+rnnJxiB/mmSGKWKbmrMmBY6JjOx3P5Kn4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Thoma\\OneDrive - ViaUC\\Global Business Engineering\\7th Semester\\DND\\C# Project\\project\\backend\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Backend.styles.css"
-    }
-  ],
-  "Endpoints": [
-    {
-      "Route": "_content/Blazor.Bootstrap/blazor.bootstrap.ai.js",
-      "AssetFile": "C:\\Users\\Thoma\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\blazor.bootstrap.ai.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2000"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"qqVhOIiDDbSiSP44XiXacBrWpys+pgsREG/S9PlabcQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 30 Sep 2024 07:52:40 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-qqVhOIiDDbSiSP44XiXacBrWpys+pgsREG/S9PlabcQ="
-        }
-      ]
-    },
-    {
-      "Route": "_content/Blazor.Bootstrap/Blazor.Bootstrap.bundle.scp.css",
-      "AssetFile": "C:\\Users\\Thoma\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\Blazor.Bootstrap.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "13987"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"CgV+hjRfNT1h1EIDIUSslXs3X51gRu0MAkHoIXDNI2M=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 21 Oct 2024 17:05:42 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-CgV+hjRfNT1h1EIDIUSslXs3X51gRu0MAkHoIXDNI2M="
-        }
-      ]
-    },
-    {
-      "Route": "_content/Blazor.Bootstrap/blazor.bootstrap.css",
-      "AssetFile": "C:\\Users\\Thoma\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\blazor.bootstrap.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "22416"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"orBjnMbqYwqiTorE8tBVEJr71Jbs42BfIoTTFqqTHlA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 06 Oct 2024 18:07:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-orBjnMbqYwqiTorE8tBVEJr71Jbs42BfIoTTFqqTHlA="
-        }
-      ]
-    },
-    {
-      "Route": "_content/Blazor.Bootstrap/blazor.bootstrap.js",
-      "AssetFile": "C:\\Users\\Thoma\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\blazor.bootstrap.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "79921"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ajVMnqBMAkGl+pstlYFA4TwJBU1G7yqG5K5q51SUDJU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 30 Sep 2024 07:52:40 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-ajVMnqBMAkGl+pstlYFA4TwJBU1G7yqG5K5q51SUDJU="
-        }
-      ]
-    },
-    {
-      "Route": "_content/Blazor.Bootstrap/blazor.bootstrap.pdf.js",
-      "AssetFile": "C:\\Users\\Thoma\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\blazor.bootstrap.pdf.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "7290"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"oAIj2P0Z/6hTwjGA3OGvWLdxMP4KwE35+AQzWQTpxAg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 15 Jul 2024 07:36:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-oAIj2P0Z/6hTwjGA3OGvWLdxMP4KwE35+AQzWQTpxAg="
-        }
-      ]
-    },
-    {
-      "Route": "_content/Blazor.Bootstrap/blazor.bootstrap.sortable-list.js",
-      "AssetFile": "C:\\Users\\Thoma\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\blazor.bootstrap.sortable-list.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1930"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"du71NM6e2+m9l81ldV+Gbr74ER7Xx1GnJFg+rIY6OQU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 15 Apr 2024 19:30:56 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-du71NM6e2+m9l81ldV+Gbr74ER7Xx1GnJFg+rIY6OQU="
-        }
-      ]
-    },
-    {
-      "Route": "_content/Blazor.Bootstrap/icon/128X128.png",
-      "AssetFile": "C:\\Users\\Thoma\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\icon\\128X128.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "7074"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"J1yB7ftYf6PWiU1781eE0JHBGfd1MV/XlLaxpVy09RU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 19 Apr 2022 11:45:42 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-J1yB7ftYf6PWiU1781eE0JHBGfd1MV/XlLaxpVy09RU="
-        }
-      ]
-    },
-    {
-      "Route": "_content/Blazor.Bootstrap/pdfjs-4.0.379.min.js",
-      "AssetFile": "C:\\Users\\Thoma\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\pdfjs-4.0.379.min.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "305685"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"XX7we2CiSWzj3rsNtKFCod90LBYAJ3bo8rmu4EuN7SQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 15 Jul 2024 07:36:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-XX7we2CiSWzj3rsNtKFCod90LBYAJ3bo8rmu4EuN7SQ="
-        }
-      ]
-    },
-    {
-      "Route": "_content/Blazor.Bootstrap/pdfjs-4.0.379.worker.min.js",
-      "AssetFile": "C:\\Users\\Thoma\\.nuget\\packages\\blazor.bootstrap\\3.1.0\\staticwebassets\\pdfjs-4.0.379.worker.min.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1029159"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"JbwqIn9Fic7JuWyTXuNnAA1T0dYQ2tkTi9HhrSltUtQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 15 Jul 2024 07:36:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-JbwqIn9Fic7JuWyTXuNnAA1T0dYQ2tkTi9HhrSltUtQ="
-        }
-      ]
-    },
-    {
-      "Route": "Backend.4wh4y5oedl.styles.css",
-      "AssetFile": "C:\\Users\\Thoma\\OneDrive - ViaUC\\Global Business Engineering\\7th Semester\\DND\\C# Project\\project\\backend\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Backend.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "72"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"bDbOXFZjk+rnnJxiB/mmSGKWKbmrMmBY6JjOx3P5Kn4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 29 Nov 2024 11:01:20 GMT"
-        },
-        {
-          "Name": "Link",
-          "Value": "<_content/Blazor.Bootstrap/Blazor.Bootstrap.bundle.scp.css>; rel=\"preload\"; as=\"style\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "4wh4y5oedl"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-bDbOXFZjk+rnnJxiB/mmSGKWKbmrMmBY6JjOx3P5Kn4="
-        },
-        {
-          "Name": "label",
-          "Value": "Backend.styles.css"
-        }
-      ]
-    },
-    {
-      "Route": "Backend.styles.css",
-      "AssetFile": "C:\\Users\\Thoma\\OneDrive - ViaUC\\Global Business Engineering\\7th Semester\\DND\\C# Project\\project\\backend\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Backend.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "72"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"bDbOXFZjk+rnnJxiB/mmSGKWKbmrMmBY6JjOx3P5Kn4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 29 Nov 2024 11:01:20 GMT"
-        },
-        {
-          "Name": "Link",
-          "Value": "<_content/Blazor.Bootstrap/Blazor.Bootstrap.bundle.scp.css>; rel=\"preload\"; as=\"style\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-bDbOXFZjk+rnnJxiB/mmSGKWKbmrMmBY6JjOx3P5Kn4="
-        }
-      ]
+      "OriginalItemSpec": "D:\\Code\\C#\\SepProject\\Project\\Backend\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Backend.styles.css"
     }
   ]
 }

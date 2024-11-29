@@ -9,97 +9,95 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Frontend
 build_property.RootNamespace = Frontend
-build_property.ProjectDir = C:\Users\Thoma\OneDrive - ViaUC\Global Business Engineering\7th Semester\DND\C# Project\project\frontend\
+build_property.ProjectDir = D:\Code\C#\SepProject\Project\Frontend\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Thoma\OneDrive - ViaUC\Global Business Engineering\7th Semester\DND\C# Project\project\frontend
+build_property.MSBuildProjectDirectory = D:\Code\C#\SepProject\Project\Frontend
 build_property._RazorSourceGeneratorDebug = 
-build_property.EffectiveAnalysisLevelStyle = 8.0
-build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/Thoma/OneDrive - ViaUC/Global Business Engineering/7th Semester/DND/C\# Project/project/frontend/Components/App.razor]
+[D:/Code/C\#/SepProject/Project/Frontend/Components/App.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Thoma/OneDrive - ViaUC/Global Business Engineering/7th Semester/DND/C\# Project/project/frontend/Components/Layout/EmptyLayout.razor]
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Layout/EmptyLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcRW1wdHlMYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Thoma/OneDrive - ViaUC/Global Business Engineering/7th Semester/DND/C\# Project/project/frontend/Components/Modals/CreateProjectModal.razor]
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Modals/CreateProjectModal.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNb2RhbHNcQ3JlYXRlUHJvamVjdE1vZGFsLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Thoma/OneDrive - ViaUC/Global Business Engineering/7th Semester/DND/C\# Project/project/frontend/Components/Modals/CreateTaskModal.razor]
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Modals/CreateTaskModal.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNb2RhbHNcQ3JlYXRlVGFza01vZGFsLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Thoma/OneDrive - ViaUC/Global Business Engineering/7th Semester/DND/C\# Project/project/frontend/Components/Modals/DeleteUserModal.razor]
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Modals/DeleteUserModal.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNb2RhbHNcRGVsZXRlVXNlck1vZGFsLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Thoma/OneDrive - ViaUC/Global Business Engineering/7th Semester/DND/C\# Project/project/frontend/Components/Pages/Error.razor]
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Thoma/OneDrive - ViaUC/Global Business Engineering/7th Semester/DND/C\# Project/project/frontend/Components/Routes.razor]
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Thoma/OneDrive - ViaUC/Global Business Engineering/7th Semester/DND/C\# Project/project/frontend/Components/_Imports.razor]
+[D:/Code/C\#/SepProject/Project/Frontend/Components/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Thoma/OneDrive - ViaUC/Global Business Engineering/7th Semester/DND/C\# Project/project/frontend/Components/Components/UserProfileDropdown.razor]
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Components/UserProfileDropdown.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb21wb25lbnRzXFVzZXJQcm9maWxlRHJvcGRvd24ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-bsi848zlm0
 
-[C:/Users/Thoma/OneDrive - ViaUC/Global Business Engineering/7th Semester/DND/C\# Project/project/frontend/Components/Layout/MainLayout.razor]
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-cj3fj28uav
 
-[C:/Users/Thoma/OneDrive - ViaUC/Global Business Engineering/7th Semester/DND/C\# Project/project/frontend/Components/Layout/NavMenu.razor]
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-ftcrkoicqg
 
-[C:/Users/Thoma/OneDrive - ViaUC/Global Business Engineering/7th Semester/DND/C\# Project/project/frontend/Components/Modals/EditTaskModal.razor]
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Modals/EditTaskModal.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNb2RhbHNcRWRpdFRhc2tNb2RhbC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-x2zg5x8ufz
 
-[C:/Users/Thoma/OneDrive - ViaUC/Global Business Engineering/7th Semester/DND/C\# Project/project/frontend/Components/Modals/EditUserModal.razor]
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Modals/EditUserModal.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNb2RhbHNcRWRpdFVzZXJNb2RhbC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-1wajpc3zzi
 
-[C:/Users/Thoma/OneDrive - ViaUC/Global Business Engineering/7th Semester/DND/C\# Project/project/frontend/Components/Modals/RegisterUserModal.razor]
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Modals/RegisterUserModal.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNb2RhbHNcUmVnaXN0ZXJVc2VyTW9kYWwucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-cx3k8xz3k1
 
-[C:/Users/Thoma/OneDrive - ViaUC/Global Business Engineering/7th Semester/DND/C\# Project/project/frontend/Components/Pages/Calendar.razor]
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Pages/Calendar.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDYWxlbmRhci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-s2v9p00mpw
 
-[C:/Users/Thoma/OneDrive - ViaUC/Global Business Engineering/7th Semester/DND/C\# Project/project/frontend/Components/Pages/Home.razor]
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-ki5ckatzno
 
-[C:/Users/Thoma/OneDrive - ViaUC/Global Business Engineering/7th Semester/DND/C\# Project/project/frontend/Components/Pages/KanbanBoard.razor]
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Pages/KanbanBoard.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xLYW5iYW5Cb2FyZC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-o96b1rmi93
 
-[C:/Users/Thoma/OneDrive - ViaUC/Global Business Engineering/7th Semester/DND/C\# Project/project/frontend/Components/Pages/LandingPage.razor]
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Pages/LandingPage.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMYW5kaW5nUGFnZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-1uetml2cpj
 
-[C:/Users/Thoma/OneDrive - ViaUC/Global Business Engineering/7th Semester/DND/C\# Project/project/frontend/Components/Pages/Login.razor]
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Pages/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMb2dpbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-1j1h6k9ujg
 
-[C:/Users/Thoma/OneDrive - ViaUC/Global Business Engineering/7th Semester/DND/C\# Project/project/frontend/Components/Pages/ManageUsers.razor]
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Pages/ManageUsers.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNYW5hZ2VVc2Vycy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-pkwo8k5cy3
 
-[C:/Users/Thoma/OneDrive - ViaUC/Global Business Engineering/7th Semester/DND/C\# Project/project/frontend/Components/Pages/TaskBoard.razor]
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Pages/TaskBoard.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xUYXNrQm9hcmQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-ut32s5viqw

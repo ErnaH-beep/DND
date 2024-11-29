@@ -85,6 +85,24 @@ namespace Project.Backend.Controllers
             }
         }
 
+        [HttpGet("{taskId}")]
+        public async Task<ActionResult<Shared.Models.Task>> GetTaskById(int taskId)
+        {
+            try
+            {
+                var task = await _taskService.GetTaskById(taskId);
+                if (task == null)
+                {
+                    return NotFound("Task not found");
+                }
+                return Ok(task);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error retrieving task");
+                return StatusCode(500, "An error occurred while processing your request.");
+            }
+        }
 
     }
 
