@@ -1,0 +1,23 @@
+[b-s2v9p00mpw] .rz-calendar {
+    --rz-calendar-cell-size: 150px !important;
+}
+
+[b-s2v9p00mpw] .rz-scheduler {
+    --rz-scheduler-event-height: 120px !important;
+    --rz-scheduler-month-cell-height: 150px !important;
+    --rz-scheduler-time-cell-width: 150px !important;
+}
+
+[b-s2v9p00mpw] .rz-scheduler-view-content td,
+[b-s2v9p00mpw] .rz-scheduler-content-table td {
+    min-width: 150px !important;
+    min-height: 150px !important;
+}
+
+[b-s2v9p00mpw] .rz-event-list {
+    height: auto !important;
+}
+
+[b-s2v9p00mpw] .rz-scheduler-month-view .rz-scheduler-content-table td {
+    height: 150px !important;
+}

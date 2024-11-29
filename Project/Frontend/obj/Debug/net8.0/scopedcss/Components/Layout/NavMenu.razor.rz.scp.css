@@ -17,14 +17,16 @@
 
 .top-row[b-ftcrkoicqg] {
     height: 3.5rem;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgb(29, 32, 36);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .navbar-brand img[b-ftcrkoicqg] {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 11.5rem;
 }
 
 .bi[b-ftcrkoicqg] {
@@ -65,7 +67,7 @@
     }
 
 .nav-item[b-ftcrkoicqg]  a.active {
-    background-color: #014a63;
+    background-color: rgba(58, 58, 58, 0.5);
     color: white;
 }
 
@@ -82,16 +84,23 @@
     display: block;
 }
 
+.logo-text[b-ftcrkoicqg] {
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    text-decoration-color: #fff;
+    margin-left: 10px;
+}
+
 @media (min-width: 641px) {
     .navbar-toggler[b-ftcrkoicqg] {
         display: none;
     }
 
     .nav-scrollable[b-ftcrkoicqg] {
-        /* Never collapse the sidebar for wide screens */
         display: block;
 
-        /* Allow sidebar to scroll for tall menus */
         height: calc(100vh - 3.5rem);
         overflow-y: auto;
     }

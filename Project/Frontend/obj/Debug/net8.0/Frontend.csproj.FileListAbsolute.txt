@@ -67,3 +67,6 @@ D:\Code\C#\SepProject\Project\Frontend\obj\Debug\net8.0\Frontend.genruntimeconfi
 D:\Code\C#\SepProject\Project\Frontend\obj\Debug\net8.0\ref\Frontend.dll
 D:\Code\C#\SepProject\Project\Frontend\obj\Debug\net8.0\scopedcss\Components\Pages\TaskBoard.razor.rz.scp.css
 D:\Code\C#\SepProject\Project\Frontend\obj\Debug\net8.0\scopedcss\Components\Pages\KanbanBoard.razor.rz.scp.css
+D:\Code\C#\SepProject\Project\Frontend\obj\Debug\net8.0\scopedcss\Components\Pages\Calendar.razor.rz.scp.css
+D:\Code\C#\SepProject\Project\Frontend\bin\Debug\net8.0\Radzen.Blazor.dll
+D:\Code\C#\SepProject\Project\Frontend\bin\Debug\net8.0\System.Linq.Dynamic.Core.dll

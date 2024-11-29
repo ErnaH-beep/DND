@@ -15,7 +15,22 @@ header[b-1uetml2cpj] {
     }
 
     .logo img[b-1uetml2cpj] {
-        width: 180px;
+        width: 100px;
+    }
+
+    .logo-text[b-1uetml2cpj] {
+        font-size: 30px;
+        font-weight: 600;
+        color: #000;
+        text-decoration: none;
+        text-decoration-color: #000;
+        margin-left: 10px;
+    }
+
+    a[b-1uetml2cpj] {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
     }
 
     .buttons[b-1uetml2cpj] {

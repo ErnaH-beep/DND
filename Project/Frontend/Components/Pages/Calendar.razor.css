@@ -1,0 +1,23 @@
+::deep .rz-calendar {
+    --rz-calendar-cell-size: 150px !important;
+}
+
+::deep .rz-scheduler {
+    --rz-scheduler-event-height: 120px !important;
+    --rz-scheduler-month-cell-height: 150px !important;
+    --rz-scheduler-time-cell-width: 150px !important;
+}
+
+::deep .rz-scheduler-view-content td,
+::deep .rz-scheduler-content-table td {
+    min-width: 150px !important;
+    min-height: 150px !important;
+}
+
+::deep .rz-event-list {
+    height: auto !important;
+}
+
+::deep .rz-scheduler-month-view .rz-scheduler-content-table td {
+    height: 150px !important;
+}

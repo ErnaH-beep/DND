@@ -1,0 +1,90 @@
+@page "/calendar"
+@inject IHttpClientFactory ClientFactory
+@inject NavigationManager NavigationManager
+@inject ILocalStorageService LocalStorage
+@using Shared.Models
+@using Radzen
+@using Radzen.Blazor
+
+<PageTitle>Calendar</PageTitle>
+
+<h4>Calendar</h4>
+
+<div class="calendar-container">
+    @if (tasks == null)
+    {
+        <p class="loading-data-text">Loading...</p>
+    }
+    else
+    {
+        <RadzenScheduler @bind-SelectedDate=@selectedDate
+                        Data=@tasks
+                        TItem="Shared.Models.Task"
+                        StartProperty="CreatedOn"
+                        EndProperty="DueDate"
+                        TextProperty="Title"
+                        Style="height: 768px;"
+                        SlotRender=@OnSlotRender
+                        AppointmentRender=@OnAppointmentRender>
+            <RadzenYearTimelineView />
+            <RadzenMonthView />
+            <RadzenDayView />
+        </RadzenScheduler>
+    }
+</div>
+
+@code {
+    DateTime selectedDate = DateTime.Today;
+    IList<Shared.Models.Task> tasks;
+
+    protected override async System.Threading.Tasks.Task OnInitializedAsync()
+    {
+        await LoadTasks();
+    }
+
+    private async System.Threading.Tasks.Task LoadTasks()
+    {
+        try
+        {
+            var client = ClientFactory.CreateClient("BackendAPI");
+            var taskResponse = await client.GetFromJsonAsync<List<Shared.Models.Task>>("api/Tasks/");
+
+            if (taskResponse != null && taskResponse.Any())
+            {
+                tasks = taskResponse.OrderBy(task => task.CreatedOn).ToList();
+            }
+            else
+            {
+                Console.WriteLine("No tasks returned from API.");
+                tasks = new List<Shared.Models.Task>();
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading tasks: {ex.Message}");
+            tasks = new List<Shared.Models.Task>();
+        }
+    }
+
+    void OnAppointmentRender(SchedulerAppointmentRenderEventArgs<Shared.Models.Task> args)
+    {
+        if (args.Data.Priority == "High")
+        {
+            args.Attributes["style"] = "background: red;";
+        }
+        else if (args.Data.Priority == "Medium")
+        {
+            args.Attributes["style"] = "background: orange;";
+        }
+        else if (args.Data.Priority == "Low")
+        {
+            args.Attributes["style"] = "background: green;";
+        }
+    }
+
+    void OnSlotRender(SchedulerSlotRenderEventArgs args)
+    {
+        args.Attributes["style"] = "";
+    }
+}
+

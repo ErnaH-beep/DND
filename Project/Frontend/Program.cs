@@ -2,6 +2,7 @@ global using Shared.Models;
 using Blazored.LocalStorage;
 using Frontend.Components;
 using Microsoft.AspNetCore.Components.Authorization;
+using Radzen;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +16,7 @@ builder.Services.AddBlazoredLocalStorage();
 builder.Services.AddScoped<AuthService>();
 builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthStateProvider>();
 builder.Services.AddAuthorizationCore();
+builder.Services.AddRadzenComponents();
 
 
 // Make HTTP requests to the backend
