@@ -1,0 +1,148 @@
+@inject IHttpClientFactory ClientFactory
+
+<Modal @ref="editTaskModal" title="Edit User Information" IsVerticallyCentered="true" UseStaticBackdrop="true"
+    CloseOnEscape="false">
+    <BodyTemplate>
+        @if (editTask != null)
+        {
+            <EditForm Model="@editTask" OnValidSubmit="@HandleSubmit">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <InputText id="title" class="form-control" @bind-Value="editTask.Title" />
+                </div>
+
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <InputTextArea id="description" class="form-control" @bind-Value="editTask.Description" rows="3" />
+                </div>
+
+                <div class="mb-3">
+                    <label for="dueDate" class="form-label">Due Date</label>
+                    <InputDate id="dueDate" class="form-control" @bind-Value="editTask.DueDate" />
+                </div>
+
+                <div class="mb-3">
+                    <label for="priority" class="form-label">Priority</label>
+                    <InputSelect id="priority" class="form-select" @bind-Value="editTask.Priority">
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </InputSelect>
+                </div>
+
+                <div class="mb-3">
+                    <label for="project" class="form-label">Project</label>
+                    <InputSelect id="project" class="form-select" @bind-Value="editTask.ProjectId">
+                        <option value="">-- Select Project --</option>
+                        @foreach (var project in Projects)
+                        {
+                            <option value="@project.Id">@project.Name</option>
+                        }
+                    </InputSelect>
+                </div>
+
+                <div class="mb-3">
+                    <label for="assignee" class="form-label">Assign To</label>
+                    <InputSelect id="assignee" class="form-select" @bind-Value="editTask.AssignedToId">
+                        <option value="">-- Select Assignee --</option>
+                        @foreach (var person in People)
+                        {
+                            <option value="@person.EmployeeId">@person.Name</option>
+                        }
+                    </InputSelect>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">Save Changes</button>
+            </EditForm>
+        }
+        else
+        {
+            <p>Loading user data...</p>
+        }
+    </BodyTemplate>
+</Modal>
+
+@if (errorMessage != null)
+{
+    <div class="alert alert-danger mt-3">
+        @errorMessage
+    </div>
+}
+
+@code {
+    [Parameter] public int? TaskId { get; set; } // Employee ID for user to edit
+    [Parameter] public EventCallback OnSubmitSuccess { get; set; }
+
+    private Shared.Models.Task? editTask;
+    private string? errorMessage;
+    private Modal editTaskModal = default!;
+    private List<ProjectModel> Projects = new();
+    private List<PersonBase> People = new();
+
+
+    public async Task ShowModal(int taskId)
+    {
+        TaskId = taskId;
+        await LoadTaskAsync();
+        await editTaskModal.ShowAsync();
+    }
+
+    public async Task HideModal()
+    {
+        await editTaskModal.HideAsync();
+    }
+
+    private async Task LoadTaskAsync()
+    {
+        try
+        {
+            var client = ClientFactory.CreateClient("BackendAPI");
+            editTask = await client.GetFromJsonAsync<Shared.Models.Task>($"api/Task/{TaskId}");
+
+            if (editTask == null)
+            {
+                errorMessage = "Task not found.";
+            }
+
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error loading task: {ex.Message}";
+        }
+    }
+
+    private async Task HandleSubmit()
+    {
+        try
+        {
+            var client = ClientFactory.CreateClient("BackendAPI");
+            var response = await client.PutAsJsonAsync($"api/Task/{editTask!.Id}", editTask);
+
+            if (response.IsSuccessStatusCode)
+            {
+                await HideModal();
+                await OnSubmitSuccess.InvokeAsync();
+            }
+            else
+            {
+                errorMessage = $"Failed to save changes: {await response.Content.ReadAsStringAsync()}";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"An error occurred: {ex.Message}";
+        }
+    }
+
+    protected override async System.Threading.Tasks.Task OnInitializedAsync()
+    {
+        var client = ClientFactory.CreateClient("BackendAPI");
+        Projects = await client.GetFromJsonAsync<List<ProjectModel>>("api/Projects") ?? new();
+
+        var allPeople = await client.GetFromJsonAsync<List<PersonBase>>("api/People") ?? new();
+        People = allPeople.Where(p => p.IsActive).ToList();
+    }
+}

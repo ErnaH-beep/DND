@@ -295,6 +295,26 @@ button:hover[b-cj3fj28uav] {
         overflow-y: auto;
     }
 }
+/* _content/Frontend/Components/Modals/EditTaskModal.razor.rz.scp.css */
+button[b-x2zg5x8ufz] {
+  width: 200px; /* Same width as input fields */
+  background-color: #014a63; /* Button background color */
+  color: white; /* Button text color */
+  padding: 10px; /* Add padding inside the button */
+  border: none; /* Remove default borders */
+  border-radius: 5px; /* Rounded corners for the button */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  margin-top: 10px; /* Add space above the button */
+  text-align: center; /* Center the text in the button */
+  display: block; /* Ensure the button takes up full width */
+  margin-left: auto; /* Center the button horizontally */
+  margin-right: auto; /* Center the button horizontally */
+}
+
+/* Button hover effect */
+.btn-primary:hover[b-x2zg5x8ufz] {
+  background-color: #4c7c8f; /* Darken button color on hover */
+}
 /* _content/Frontend/Components/Modals/EditUserModal.razor.rz.scp.css */
 button[b-1wajpc3zzi] {
   width: 200px; /* Same width as input fields */

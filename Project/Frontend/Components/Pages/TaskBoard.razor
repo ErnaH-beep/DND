@@ -76,8 +76,8 @@ else
                                     <i class="bi bi-three-dots-vertical"></i>
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><button class="dropdown-item" @onclick="() => EditTask(task)">Edit</button></li>
-                                    <li><button class="dropdown-item" @onclick="() => DeleteTask(task)">Delete</button></li>
+                                    <li><button class="dropdown-item" @onclick="() => ShowEditTaskModal(task.Id)">Edit</button></li>
+                                    <li><button class="dropdown-item" @onclick="() => ShowDeleteTaskModal(task)">Delete</button></li>
                                 </ul>
                             </div>
                         }
@@ -89,7 +89,9 @@ else
 
     <CreateProjectModal @ref="createProjectModal" OnSubmitSuccess="HandleProjectCreated" />
     <CreateTaskModal @ref="createTaskModal" OnSubmitSuccess="LoadTasks" />
+    <EditTaskModal @ref="editTaskModal" OnSubmitSuccess="LoadTasks" />
 }
+
 
 @code {
     private string? UserRole { get; set; }
@@ -98,6 +100,7 @@ else
     private string? selectedProjectId;
     private CreateProjectModal? createProjectModal;
     private CreateTaskModal? createTaskModal;
+    private EditTaskModal editTaskModal = default!;
     private List<Shared.Models.Task> Tasks = new();
     private List<ProjectModel> Projects = new();
     private List<PersonBase> People = new();
@@ -157,14 +160,13 @@ else
         }
     }
 
-    private void EditTask(Shared.Models.Task task)
+    private async System.Threading.Tasks.Task ShowEditTaskModal(int taskId)
     {
-        // Implement edit functionality
+        await editTaskModal.ShowModal(taskId);
     }
 
-    private async System.Threading.Tasks.Task DeleteTask(Shared.Models.Task task)
+    private async System.Threading.Tasks.Task ShowDeleteTaskModal(Shared.Models.Task taskId)
     {
-        
     }
 
     private async System.Threading.Tasks.Task LoadProjects()

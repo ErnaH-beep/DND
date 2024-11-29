@@ -1,48 +1,52 @@
 {
   "Files": [
     {
-      "Id": "D:\\Code\\C#\\SepProject\\Project\\Frontend\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Frontend.bundle.scp.css",
-      "PackagePath": "staticwebassets\\Frontend.bundle.scp.css"
+      "Id": "C:\\Users\\Thoma\\OneDrive - ViaUC\\Global Business Engineering\\7th Semester\\DND\\C# Project\\project\\frontend\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Frontend.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Frontend.eu03awllq7.bundle.scp.css"
     },
     {
-      "Id": "D:\\Code\\C#\\SepProject\\Project\\Frontend\\wwwroot\\app.css",
+      "Id": "C:\\Users\\Thoma\\OneDrive - ViaUC\\Global Business Engineering\\7th Semester\\DND\\C# Project\\project\\frontend\\wwwroot\\app.css",
       "PackagePath": "staticwebassets\\app.css"
     },
     {
-      "Id": "D:\\Code\\C#\\SepProject\\Project\\Frontend\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Id": "C:\\Users\\Thoma\\OneDrive - ViaUC\\Global Business Engineering\\7th Semester\\DND\\C# Project\\project\\frontend\\wwwroot\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\Code\\C#\\SepProject\\Project\\Frontend\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\Thoma\\OneDrive - ViaUC\\Global Business Engineering\\7th Semester\\DND\\C# Project\\project\\frontend\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "D:\\Code\\C#\\SepProject\\Project\\Frontend\\wwwroot\\favicon.png",
+      "Id": "C:\\Users\\Thoma\\OneDrive - ViaUC\\Global Business Engineering\\7th Semester\\DND\\C# Project\\project\\frontend\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "D:\\Code\\C#\\SepProject\\Project\\Frontend\\wwwroot\\images\\carbon-dioxide.png",
+      "Id": "C:\\Users\\Thoma\\OneDrive - ViaUC\\Global Business Engineering\\7th Semester\\DND\\C# Project\\project\\frontend\\wwwroot\\images\\carbon-dioxide.png",
       "PackagePath": "staticwebassets\\images\\carbon-dioxide.png"
     },
     {
-      "Id": "D:\\Code\\C#\\SepProject\\Project\\Frontend\\wwwroot\\images\\hero-bg.jpg",
+      "Id": "C:\\Users\\Thoma\\OneDrive - ViaUC\\Global Business Engineering\\7th Semester\\DND\\C# Project\\project\\frontend\\wwwroot\\images\\hero-bg.jpg",
       "PackagePath": "staticwebassets\\images\\hero-bg.jpg"
     },
     {
-      "Id": "D:\\Code\\C#\\SepProject\\Project\\Frontend\\wwwroot\\images\\no-data-available.png",
+      "Id": "C:\\Users\\Thoma\\OneDrive - ViaUC\\Global Business Engineering\\7th Semester\\DND\\C# Project\\project\\frontend\\wwwroot\\images\\no-data-available.png",
       "PackagePath": "staticwebassets\\images\\no-data-available.png"
     },
     {
-      "Id": "D:\\Code\\C#\\SepProject\\Project\\Frontend\\wwwroot\\images\\reduction.png",
+      "Id": "C:\\Users\\Thoma\\OneDrive - ViaUC\\Global Business Engineering\\7th Semester\\DND\\C# Project\\project\\frontend\\wwwroot\\images\\reduction.png",
       "PackagePath": "staticwebassets\\images\\reduction.png"
     },
     {
-      "Id": "D:\\Code\\C#\\SepProject\\Project\\Frontend\\wwwroot\\images\\salling-group-logo-dashboard.png",
+      "Id": "C:\\Users\\Thoma\\OneDrive - ViaUC\\Global Business Engineering\\7th Semester\\DND\\C# Project\\project\\frontend\\wwwroot\\images\\salling-group-logo-dashboard.png",
       "PackagePath": "staticwebassets\\images\\salling-group-logo-dashboard.png"
     },
     {
-      "Id": "D:\\Code\\C#\\SepProject\\Project\\Frontend\\wwwroot\\images\\salling-group-logo.png",
+      "Id": "C:\\Users\\Thoma\\OneDrive - ViaUC\\Global Business Engineering\\7th Semester\\DND\\C# Project\\project\\frontend\\wwwroot\\images\\salling-group-logo.png",
       "PackagePath": "staticwebassets\\images\\salling-group-logo.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Frontend.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Frontend.Microsoft.AspNetCore.StaticWebAssets.props",

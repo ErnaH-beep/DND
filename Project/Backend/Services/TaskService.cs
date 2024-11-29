@@ -49,5 +49,35 @@ namespace Project.Backend.Services
                 .Where(t => t.IsActive)
                 .ToListAsync();
         }
+
+        public async Task<string> UpdateTask(int taskId, Shared.Models.Task updatedTask)
+        {
+            try
+            {
+                var existingTask = await _dbContext.Tasks.FirstOrDefaultAsync(t => t.Id == taskId);
+
+                if (existingTask == null)
+                {
+                    return "Task not found";
+                }
+
+                existingTask.Title = updatedTask.Title;
+                existingTask.Description = updatedTask.Description;
+                existingTask.DueDate = updatedTask.DueDate;
+                existingTask.Priority = updatedTask.Priority;
+                existingTask.ProjectId = updatedTask.ProjectId;
+                existingTask.AssignedToId = updatedTask.AssignedToId;
+                existingTask.ModifiedOn = DateTime.Now;
+
+                await _dbContext.SaveChangesAsync();
+                return "Success!";
+            }
+            catch (Exception ex) 
+            {
+                Console.WriteLine($"Error in updateTask: {ex.Message}");
+                return ex.Message;
+            }
+            
+        }
     }
-} 
+}

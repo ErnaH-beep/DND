@@ -56,5 +56,37 @@ namespace Project.Backend.Controllers
                 return StatusCode(500, "An error occurred while processing your request.");
             }
         }
+
+        [HttpPut("{taskId}")]
+        public async Task<IActionResult> UpdateTask(int taskId, [FromBody] Shared.Models.Task updatedTask)
+        {
+            try
+            {
+                if (taskId != updatedTask.Id)
+                {
+                    return BadRequest("TaskId mismatch.");
+                }
+
+                var result = await _taskService.UpdateTask(taskId, updatedTask);
+
+                if (result == "Success")
+                {
+                    return Ok("Task successfully updated.");
+                }
+                else
+                {
+                    return NotFound(result);
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Failed to update task");
+                return StatusCode(500, "An error occurred while processing your request.");
+            }
+        }
+
+
     }
-} 
+
+
+}
