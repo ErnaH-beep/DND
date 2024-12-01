@@ -1,4 +1,4 @@
-# TASKIFY - Task Manager :calendar:
+# TASKER - Task Manager :calendar:
 
 ### Problem:  
 
