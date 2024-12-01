@@ -104,6 +104,29 @@ namespace Project.Backend.Controllers
             }
         }
 
+        [HttpDelete("{taskId}")]
+        public async Task<IActionResult> DeleteTask(int taskId)
+        {
+            try
+            {
+                var result = await _taskService.DeleteTask(taskId);
+
+                if (result == "Success")
+                {
+                    return Ok("Task successfully deactivated.");
+                }
+                else
+                {
+                    return NotFound(result);
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Failed to deactivate task");
+                return StatusCode(500, "An error occurred while processing your request.");
+            }
+        }
+
     }
 
 

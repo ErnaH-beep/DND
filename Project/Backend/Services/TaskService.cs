@@ -68,22 +68,47 @@ namespace Project.Backend.Services
                 existingTask.ProjectId = updatedTask.ProjectId;
                 existingTask.AssignedToId = updatedTask.AssignedToId;
                 existingTask.ModifiedOn = DateTime.Now;
-                
+
                 await _dbContext.SaveChangesAsync();
                 return "Success";
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 Console.WriteLine($"Error in updateTask: {ex.Message}");
                 return ex.Message;
             }
-            
+
         }
 
         public async Task<Shared.Models.Task?> GetTaskById(int taskId)
         {
             return await _dbContext.Tasks
                 .FirstOrDefaultAsync(t => t.Id == taskId && t.IsActive);
+        }
+
+        public async Task<string> DeleteTask(int taskId)
+        {
+            try
+            {
+                var task = await _dbContext.Tasks.FirstOrDefaultAsync(t => t.Id == taskId);
+
+                if (task != null)
+                {
+                    task.IsActive = false;
+                    task.ModifiedOn = DateTime.Now;
+                    await _dbContext.SaveChangesAsync();
+                    return "Success";
+                }
+                else
+                {
+                    return "Task ID not found.";
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in DeleteTask: {ex.Message}");
+                return ex.Message;
+            }
         }
     }
 }

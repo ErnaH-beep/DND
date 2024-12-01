@@ -34,6 +34,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNb2RhbHNcQ3JlYXRlVGFza01vZGFsLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Code/C\#/SepProject/Project/Frontend/Components/Modals/DeleteTaskModal.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNb2RhbHNcRGVsZXRlVGFza01vZGFsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Code/C\#/SepProject/Project/Frontend/Components/Modals/DeleteUserModal.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNb2RhbHNcRGVsZXRlVXNlck1vZGFsLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 

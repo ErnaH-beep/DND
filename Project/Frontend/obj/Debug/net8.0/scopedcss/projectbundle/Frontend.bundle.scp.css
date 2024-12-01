@@ -506,123 +506,104 @@ button[b-cx3k8xz3k1] {
 }
 
 header[b-1uetml2cpj] {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
-        background-color: white;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        position: fixed;
-        width: 100%;
-        z-index: 2;
-    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-bottom: 1px solid #000;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    /* Add these properties for centering and max-width */
+    max-width: 1400px;
+    /* Equivalent to Tailwind's 5xl */
+    left: 50%;
+    transform: translateX(-50%);
+}
 
-    .logo img[b-1uetml2cpj] {
-        width: 100px;
-    }
+.logo img[b-1uetml2cpj] {
+    width: 100px;
+}
 
-    .logo-text[b-1uetml2cpj] {
-        font-size: 30px;
-        font-weight: 600;
-        color: #000;
-        text-decoration: none;
-        text-decoration-color: #000;
-        margin-left: 10px;
-    }
+.logo-text[b-1uetml2cpj] {
+    font-size: 30px;
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+    text-decoration-color: #000;
+    margin-left: 10px;
+}
 
-    a[b-1uetml2cpj] {
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-    }
+a[b-1uetml2cpj] {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
 
-    .buttons[b-1uetml2cpj] {
-        display: flex;
-        gap: 15px;
-    }
+.buttons[b-1uetml2cpj] {
+    display: flex;
+    gap: 15px;
+}
 
-    .login-btn[b-1uetml2cpj], .signup-btn[b-1uetml2cpj] {
-        padding: 10px 20px;
-        border: 1px solid #014a63;
-        color: #014a63;
-        text-decoration: none;
-        background-color: transparent;
-        border-radius: 20px;
-        font-size: 16px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: .3s ease;
-    }
+.login-btn[b-1uetml2cpj],
+.signup-btn[b-1uetml2cpj] {
+    padding: 10px 20px;
+    border: 1px solid #000;
+    color: #000;
+    text-decoration: none;
+    background-color: transparent;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s ease;
+}
 
-    .login-btn-2[b-1uetml2cpj] {
-        padding: 10px 20px;
-        border: 1px solid white;
-        color: white;
-        text-decoration: none;
-        background-color: transparent;
-        border-radius: 20px;
-        font-size: 16px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: .3s ease;
-    }
+.login-btn-2[b-1uetml2cpj] {
+    padding: 10px 20px;
+    border: 1px solid black;
+    color: black;
+    text-decoration: none;
+    background-color: transparent;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s ease;
+}
 
-    .signup-btn[b-1uetml2cpj] {
-        background-color: #014a63;
-        color: white;
-    }
+.login-btn:hover[b-1uetml2cpj],
+.login-btn-2:hover[b-1uetml2cpj],
+.signup-btn:hover[b-1uetml2cpj] {
+    background-color: lightgray;
+    border-color: black;
+}
 
-    .login-btn:hover[b-1uetml2cpj], .login-btn-2:hover[b-1uetml2cpj], .signup-btn:hover[b-1uetml2cpj] {
-        background-color: #4c7c8f;
-        color: white;
-        border-color: #4c7c8f;
-    }
+.hero[b-1uetml2cpj] {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    background-color: #fff;
+    color: black;
+}
 
-    .hero[b-1uetml2cpj] {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh; /* Adjust height minus header */
-        text-align: center;
-        background-image: url('/images/hero-bg.jpg'); /* Path to your background image */
-        background-size: cover; /* Ensures the image covers the entire section */
-        background-position: center; /* Centers the image */
-        background-repeat: no-repeat; /* Prevents the image from repeating */
-        color: white; /* Adjust text color to ensure readability */
-        padding: 20px;
-    }
+.hero h1[b-1uetml2cpj] {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
 
-    .hero[b-1uetml2cpj]::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.2); /* Black overlay with 50% opacity */
-        z-index: 1; /* Make sure it's behind the text */
-    }
+.hero p[b-1uetml2cpj] {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
 
-    .hero h1[b-1uetml2cpj], .hero p[b-1uetml2cpj], .hero .buttons[b-1uetml2cpj] {
-        position: relative;
-        z-index: 2; /* Ensure text is above the overlay */
-    }
-
-    .hero h1[b-1uetml2cpj] {
-        font-size: 4.5rem;
-        margin-bottom: 20px;
-        color: white; /* Change text color for better contrast */
-        width: 64%;
-    }
-
-    .hero p[b-1uetml2cpj] {
-        font-size: 1.5rem;
-        line-height: 2rem;
-        margin-bottom: 40px;
-        color: white; /* Change text color for better contrast */
-        width: 36%;
-    }
+.hero img[b-1uetml2cpj] {
+    max-width: 100%;
+    height: auto;
+}
 /* _content/Frontend/Components/Pages/Login.razor.rz.scp.css */
 *[b-1j1h6k9ujg] {
   font-family: "Afacad Flux", sans-serif;

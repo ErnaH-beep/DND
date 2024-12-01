@@ -77,7 +77,7 @@ else
                                 </button>
                                 <ul class="dropdown-menu">
                                     <li><button class="dropdown-item" @onclick="() => ShowEditTaskModal(task.Id)">Edit</button></li>
-                                    <li><button class="dropdown-item" @onclick="() => ShowDeleteTaskModal(task)">Delete</button></li>
+                                    <li><button class="dropdown-item" @onclick="() => ShowDeleteTaskModal(task.Id)">Delete</button></li>
                                 </ul>
                             </div>
                         }
@@ -90,6 +90,7 @@ else
     <CreateProjectModal @ref="createProjectModal" OnSubmitSuccess="HandleProjectCreated" />
     <CreateTaskModal @ref="createTaskModal" OnSubmitSuccess="LoadTasks" />
     <EditTaskModal @ref="editTaskModal" OnSubmitSuccess="LoadTasks" />
+    <DeleteTaskModal @ref="deleteTaskModal" OnDeleteSuccess="LoadTasks" />
 }
 
 
@@ -101,6 +102,7 @@ else
     private CreateProjectModal? createProjectModal;
     private CreateTaskModal? createTaskModal;
     private EditTaskModal editTaskModal = default!;
+    private DeleteTaskModal deleteTaskModal = default!;
     private List<Shared.Models.Task> Tasks = new();
     private List<ProjectModel> Projects = new();
     private List<PersonBase> People = new();
@@ -165,8 +167,9 @@ else
         await editTaskModal.ShowModal(taskId);
     }
 
-    private async System.Threading.Tasks.Task ShowDeleteTaskModal(Shared.Models.Task taskId)
+    private async System.Threading.Tasks.Task ShowDeleteTaskModal(int taskId)
     {
+        await deleteTaskModal.ShowModal(taskId);
     }
 
     private async System.Threading.Tasks.Task LoadProjects()
