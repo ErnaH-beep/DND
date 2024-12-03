@@ -2,11 +2,11 @@
 
 ## Overview
 
-Our project implements a robust data access layer using Entity Framework Core 9.0 with SQLite as the database provider. This implementation follows the Repository pattern through services, providing a clean separation of concerns between the data access logic and business logic.
+Our project implements a data access layer using EFC with SQLite as the database provider. This implementation follows the Repository pattern through services, providing a separation of concerns between the data access logic and business logic.
 
 ### Why Entity Framework Core?
 
-We chose Entity Framework Core as our Object-Relational Mapper (ORM) for its comprehensive feature set and modern architecture. It provides strong type safety with compile-time checking and IntelliSense support, making development more efficient and reducing runtime errors. The integration with LINQ enables powerful and intuitive querying capabilities, while its cross-platform nature ensures our application runs seamlessly across different environments.
+We used Entity Framework Core as our Object-Relational Mapper (ORM) for its feature set and modern architecture. It provides strong type safety with compile-time checking and IntelliSense, making development more efficient and reducing runtime errors. The integration with LINQ enables easy querying capabilities, and makes the application run seemlessly.
 
 - Database Context
   - The core of our data access layer is implemented through the `AppDbContext` class, which inherits from `DbContext`. This class serves as the primary point of interaction with our database.
@@ -51,7 +51,7 @@ public async Task<string> UpdateTaskStatus(int taskId, string newStatus)
 
 ### Why SQLite?
 
-SQLite serves as our database provider due to its simplicity and efficiency. Unlike traditional database systems, SQLite doesn't require a separate server process, as the entire database is stored in a single file. This makes deployment and maintenance significantly easier. Its ACID compliance ensures data reliability with excellent crash recovery capabilities, while its performance characteristics make it ideal for small to medium-sized applications like ours.
+SQLite serves as our database provider due to its simplicity and efficiency. Unlike traditional database systems, SQLite doesn't require a separate server process, as the entire database is stored in a single file. This makes deployment and maintenance significantly easier.
 
 ## Database Context
 
@@ -92,7 +92,7 @@ public class AppDbContext : DbContext
 ```
 
 ## Service Layer Implementation
-Our data access is orchestrated through services that act as repositories, with each service handling data operations for a specific entity type. Here's an example of our PersonService implementation:
+Our data access is made through services that act as repositories, with each service handling data operations for a specific entity type. Here's an example of our PersonService implementation:
 
 ```csharp
 public class PersonService
@@ -130,11 +130,9 @@ public class PersonService
 
 ### Service Layer Design Patterns
 
-Our service layer implements several key design patterns to ensure efficient and maintainable code. The Repository Pattern is implemented through services, where each service acts as a specialized repository for its entity type. This encapsulation of data access logic provides a clean API for the business layer and facilitates unit testing through dependency injection.
+Our service layer implements several key design patterns to ensure efficient and maintainable code. The Repository Pattern is implemented through services, where each service acts as a specialized repository for its entity type. 
 
-Query building in our services utilizes deferred execution through `IQueryable`, allowing us to build queries dynamically based on parameters. This approach optimizes database queries by applying filters before execution, reducing unnecessary data retrieval.
-
-We've implemented the async/await pattern throughout our data access layer to improve application scalability. This asynchronous approach prevents thread blocking and ensures better resource utilization, particularly important when handling multiple concurrent requests.
+We've implemented the async/await pattern throughout our data access layer. This asynchronous approach prevents thread blocking and ensures better resource utilization, particularly important when handling multiple concurrent requests.
 
 ## Entity Models
 
@@ -161,23 +159,16 @@ public class Employee : PersonBase { }
 public class Manager : PersonBase { }
 ```
 
-### Entity Design Patterns
-
-Our entity design implements interface segregation to separate different concerns. The `IPersonDTO` interface handles data transfer operations, while `IPerson` manages entity-specific operations. This separation allows for more flexible and maintainable code.
-
-The inheritance hierarchy in our entity design places common properties in the base class, with derived classes for specific roles. This approach enables polymorphic behavior while maintaining code reusability. We've also implemented audit fields (`CreatedOn`, `ModifiedOn`) and soft delete functionality (`IsActive`) to track entity lifecycle and maintain data history.
-
 ## Best Practices and Performance Considerations
 
-Our data access implementation adheres to several key best practices. We maintain a strict separation of concerns, with data access logic isolated in services and business logic in a separate layer, following clean architecture principles.
+Our data access implementation adheres to several key practices. We maintain a strict separation of concerns, with data access logic isolated in services and business logic in a separate layer, following architecture principles.
 
-The codebase is organized with a logical folder structure and consistent naming conventions, making it easy to navigate and maintain. Error handling is implemented comprehensively, with proper exception handling and meaningful error messages to facilitate debugging and provide better user feedback.
+The codebase is organized with a logical folder structure and consistent naming conventions, making it easy to navigate and maintain. Error handling is implemented with proper exception handling and meaningful error messages to assist debugging and provide better user feedback.
 
 Performance optimization is achieved through several mechanisms:
 
-- Efficient query building using LINQ and IQueryable
-- Proper database indexing on frequently queried fields
-- Strategic use of lazy loading to prevent unnecessary data retrieval
-- Support for batch operations to reduce database round trips
+- Efficient query building using LINQ and IQueryable.
+- Proper database indexing on frequently queried fields.
+- Strategic use of lazy loading to prevent unnecessary data retrieval.
 
-These practices ensure our data access layer remains performant, maintainable, and secure while providing a solid foundation for the application's data management needs.
+These practices ensure our data access layer remains performant and maintainable, while providing a solid foundation for the application's data management needs.
