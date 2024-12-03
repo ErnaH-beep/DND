@@ -35,8 +35,7 @@ namespace Project.Backend.Services
 
         public async Task<string> UpdateTaskStatus(int taskId, string newStatus)
         {
-            var task = await _dbContext.Tasks.FindAsync(taskId);
-            if (task == null) throw new KeyNotFoundException("Task not found");
+            var task = await _dbContext.Tasks.FindAsync(taskId) ?? throw new KeyNotFoundException("Task not found");
             task.Status = newStatus;
             task.ModifiedOn = DateTime.Now;
             await _dbContext.SaveChangesAsync();
