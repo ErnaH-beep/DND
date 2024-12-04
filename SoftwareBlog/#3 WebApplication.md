@@ -181,7 +181,7 @@ builder.Services.AddHttpClient("BackendAPI", client =>
 
 Frontend Request Handling: In our Blazor components, fx. the Kanban board page, we can now make HTTP requests using the client we set up. For example, to fetch data (such as tasks, projects, or people), we use HttpClient to call the API and retrieve the necessary data.
 
-Here's an example from the OnInitializedAsync method of the Kanban board page where we fetch tasks and projects:
+Here's an example from the `OnInitializedAsync` method of the Kanban board page where we fetch tasks and projects:
 ```
 var client = ClientFactory.CreateClient("BackendAPI");
 Tasks = await client.GetFromJsonAsync<List<Shared.Models.Task>>("api/Tasks");
