@@ -31,3 +31,4 @@
 [Watch the demonstration on YouTube](LINK HERE)
 
 ## Final Project Conclusion
+All in all the project turned out sucessfully. The initials requirements
