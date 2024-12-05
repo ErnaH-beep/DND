@@ -5,9 +5,9 @@
    - [Backend Infrastructure](#backend-infrastructure)
    - [Frontend Development](#frontend-development)
    - [User Management](#user-management)
-   - [Waste Report Analytics](#waste-report-analytics)
+   - [Task Management](#task-management)
    - [Data Access](#data-access)
-   - [Sustainability Goals](#sustainability-goals)
+   - [Final Testing and Optimization](#final-testing-and-optimization)
 2. [Project Outcome](#project-outcome)
 3. [Updated Requirements List](#status-requirements-list)
 4. [Short Demonstration Video](#demonstration-video)
@@ -19,39 +19,39 @@
 
 ## Final Development Update
 
-### Backend Infrastructure
+1. **Backend Infrastructure**
 - Implemented robust task management system with CRUD operations
 - Established secure user authentication and authorization
 - Developed role-based access control system for different user types
 - Created API endpoints for task operations and user management
 
-### Frontend Development
+2. **Frontend Development**
 - Designed and implemented an intuitive user interface
 - Created interactive dashboard with visual data representations
 - Developed a functional Kanban board for task visualization
 - Implemented calendar view for better task planning
 - Added filtering and sorting capabilities for task management
 
-### User Management
+3. **User Management**
 - Implemented user authentication system with login/logout functionality
 - Developed role-based permissions (Employee and Manager roles)
 - Created user role management system for Managers
 - Set up access control mechanisms for task visibility and editing
 
-### Task Management
+4. **Task Management**
 - Implemented comprehensive task CRUD operations
 - Added task status tracking functionality
 - Created task filtering and sorting capabilities
 - Developed task assignment and ownership features
 - Implemented task completion marking system
 
-### Data Access
+5. **Data Access**
 - Established secure data access patterns based on user roles
 - Implemented data visibility controls
 - Created efficient data retrieval methods for tasks and user information
 - Set up proper data management for task updates and modifications
 
-### Final Testing and Optimization
+6. **Final Testing and Optimization**
 - Conducted thorough testing of all implemented features
 - Optimized application performance
 - Fixed identified bugs and issues
