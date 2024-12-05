@@ -31,7 +31,7 @@ img[b-1j1h6k9ujg] {
 
 button[b-1j1h6k9ujg] {
   width: 200px; /* Same width as input fields */
-  background-color: #014a63; /* Button background color */
+  background-color: rgb(29, 32, 36); /* Button background color */
   color: white; /* Button text color */
   padding: 10px; /* Add padding inside the button */
   border: none; /* Remove default borders */
@@ -46,5 +46,18 @@ button[b-1j1h6k9ujg] {
 
 /* Button hover effect */
 .btn-primary:hover[b-1j1h6k9ujg] {
-  background-color: #013b52; /* Darken button color on hover */
+  background-color: rgb(39, 43, 48); /* Darken button color on hover */
+}
+
+.logo img[b-1j1h6k9ujg] {
+  width: 100px;
+}
+
+.logo-text[b-1j1h6k9ujg] {
+  font-size: 30px;
+  font-weight: 600;
+  color: #000;
+  text-decoration: none;
+  text-decoration-color: #000;
+  margin-left: 10px;
 }

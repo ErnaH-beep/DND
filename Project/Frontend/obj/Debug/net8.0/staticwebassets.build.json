@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mYdNu8Fw+sOJHw/xi2JQuoj48faW04xK39iFp1i/J7k=",
+  "Hash": "d8W8pFz4ZMs39mWDFWoZPwuNi0wEyy6pfv573fKZXsY=",
   "Source": "Frontend",
   "BasePath": "_content/Frontend",
   "Mode": "Default",
@@ -1915,44 +1915,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\heroPic.png"
-    },
-    {
-      "Identity": "D:\\Code\\C#\\SepProject\\Project\\Frontend\\wwwroot\\images\\salling-group-logo-dashboard.png",
-      "SourceId": "Frontend",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\C#\\SepProject\\Project\\Frontend\\wwwroot\\",
-      "BasePath": "_content/Frontend",
-      "RelativePath": "images/salling-group-logo-dashboard.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\salling-group-logo-dashboard.png"
-    },
-    {
-      "Identity": "D:\\Code\\C#\\SepProject\\Project\\Frontend\\wwwroot\\images\\salling-group-logo.png",
-      "SourceId": "Frontend",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\C#\\SepProject\\Project\\Frontend\\wwwroot\\",
-      "BasePath": "_content/Frontend",
-      "RelativePath": "images/salling-group-logo.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\salling-group-logo.png"
     }
   ]
 }

@@ -25,14 +25,6 @@
       "PackagePath": "staticwebassets\\images\\heroPic.png"
     },
     {
-      "Id": "D:\\Code\\C#\\SepProject\\Project\\Frontend\\wwwroot\\images\\salling-group-logo-dashboard.png",
-      "PackagePath": "staticwebassets\\images\\salling-group-logo-dashboard.png"
-    },
-    {
-      "Id": "D:\\Code\\C#\\SepProject\\Project\\Frontend\\wwwroot\\images\\salling-group-logo.png",
-      "PackagePath": "staticwebassets\\images\\salling-group-logo.png"
-    },
-    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Frontend.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
