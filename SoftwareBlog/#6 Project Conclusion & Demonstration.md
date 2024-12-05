@@ -31,4 +31,6 @@
 [Watch the demonstration on YouTube](LINK HERE)
 
 ## Final Project Conclusion
-All in all the project turned out sucessfully. The initials requirements
+All in all, the project turned out successfully. The initial requirements were met, with the exception of the registration functionality for the users. Additionally, a calendar, a kanban board, and visuals on the dashboard have been implemented to enhance planning, tracking, and overall user experience.
+The implementation of user-roles adds significant value to teams and organizations by ensuring clear responsibilities and efficient task management. Employees can manage their own tasks while viewing all, and managers can oversee projects and adjust roles as needed.
+
