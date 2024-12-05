@@ -2,160 +2,118 @@
 
 ## Users in the system
 The system is designed to manage two types of users:
-* Admin(Manager): These users have full access to all system functionalities, including managing other users and viewing sensitive data.
-* Regular User(Employee) : These users have limited access, primarily interacting with the system based on assigned permissions (e.g., viewing their own data or using basic functionalities).
+- **Admin(Manager)**: These users have full access to all system functionalities, including managing other users and viewing sensitive data.
+- **Regular User(Employee)**: These users have limited access, primarily interacting with the system based on assigned permissions (e.g., viewing their own data or using basic functionalities).
 
 ### Implementation of Log-In Functionality:
-The login functionality is implemented in the `login_user()` function. It uses user credentials stored in the database to authenticate users and determine their access level.
+The login functionality is implemented in the `Login` endpoint within the `PeopleController`. It uses user credentials stored in the database to authenticate users and determine their access level.
 
 ### Steps in the Login Process:
-User Input: The user provides their username and password via the login form.
-Database Query: The system queries the database to check if the entered username exists.
-Password Verification: The hashed password stored in the database is compared with the entered password using a hashing function.
-Session Creation: Upon successful login, the user's ID is stored in the session to track their authentication status.
-Access Levels: Based on the user type (e.g., manager or employee), the system redirects them to the appropriate dashboard or page.
-
-The login process is securely implemented to authenticate users and grant appropriate access based on their roles.
-The route `/login` is defined to handle both GET and POST requests:
-* GET Request: Loads the login form for the user to enter their credentials.
-* POST Request: Processes the submitted form data to authenticate the user.
+1. User Input: The user provides their employee ID and password via the login form.
+2. Database Query: The system queries the database using `_personService.GetPersonById()` to check if the entered employee ID exists.
+3. Password Verification: The entered password is verified against the hashed password using BCrypt.
+4. JWT Creation: Upon successful login, a JWT token is generated containing claims about the user.
+5. Access Levels: Based on the user's role, appropriate access rights are granted through the JWT token.
 
 ### User Input
-  The `request.form.get()` method retrieves the `username` and `password` entered by the user in the login form.
+  The login endpoint accepts a `PersonBase` object containing the user's credentials through the request body:
+```csharp
+[HttpPost("login")]
+public async Task<IActionResult> Login([FromBody] PersonBase person)
 ```
-username = request.form.get('username')
-password = request.form.get('password')
-```
-Why `request.form.get()?`
-It safely retrieves data from the form fields and avoids errors if a field is missing.
+
 
 ### Database Query:
-The `User.query.filter_by(username=username).first()` method searches the database for a user with the matching username. If no match is found, the user is notified that the username doesn’t exist.
+The system checks if the user exists and is active:
 
-```user = User.query.filter_by(username=username).first()```
+```csharp
+var foundPerson = await _personService.GetPersonById(person.EmployeeId);
 
-This ensures that only registered users can attempt to log in.
+if (foundPerson == null || !foundPerson.IsActive)
+{
+    return Unauthorized("Invalid employee ID or inactive account.");
+}
+```
+
+This ensures that only registered active users can attempt to log in.
 
 ### Password Verification:
-`The check_password_hash()` function verifies the password entered by the user against the hashed password stored in the database.
-```
-if check_password_hash(user.password, password):
+BCrypt is used to verify the password against the stored hash:
+```csharp
+bool isPasswordValid = BCrypt.Net.BCrypt.Verify(person.Password, foundPerson.Password);
+if (!isPasswordValid)
+{
+    return Unauthorized("Invalid password.");
+}
 ```
 Why use password hashing?
 Storing hashed passwords improves security by protecting against data breaches. Even if the database is compromised, attackers cannot retrieve plain-text passwords.
 
 ### Authentication and Session Management:
-The `login_user()` function from the Flask-Login library is used to log the user into the application. It stores the user’s authentication state in the session.
-```
-login_user(user)
-```
-Why use Flask-Login?
-It simplifies user authentication by managing sessions, login status, and user-specific data securely.
+The system uses JWT (JSON Web Tokens) for authentication. Upon successful login, a JWT token is generated:
+```csharp
+var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
+var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
-### Role based redirection:
-
-After successful login, the user is redirected to their designated dashboard:
-
-Manager: Redirected to `admin_dashboard`.
-Employee: Redirected to `user_dashboard`.
+var token = new JwtSecurityToken(
+    _config["Jwt:Issuer"],
+    _config["Jwt:Issuer"],
+    null,
+    expires: DateTime.Now.AddMinutes(120),
+    signingCredentials: credentials
+);
 ```
-return redirect(url_for('admin_dashboard') if user.is_admin else url_for('user_dashboard'))
-```
+Why use JWT?
+JWTs provide a secure, stateless way to handle user authentication and authorization. They contain all necessary user information and are cryptographically signed to make sure of the integrity.
 
+### Role based access:
+The system includes the user's role in the JWT response:
+```csharp
+var response = new { Token = jwtToken, EmployeeId = foundPerson.EmployeeId, Role = foundPerson.Role };
+```
 This ensures that users only access pages and features relevant to their roles.
 
 ### Error Handling:
+The system provides appropriate error responses for various scenarios:
+- Invalid employee ID or inactive account
+- Invalid password
+- Other potential errors during the authentication process
 
-If the username or password is invalid, the user is shown appropriate error messages using Flask’s `flash()` function.
+These responses help users understand why their login attempt failed and what actions they need to take.
+
+## Access to resources
+### Role-Based Access Control
+The system implements role-based access control (RBAC) through JWT tokens and user roles. When a user logs in, their role is included in the JWT response:
+```csharp
+var response = new { Token = jwtToken, EmployeeId = foundPerson.EmployeeId, Role = foundPerson.Role };
 ```
-flash('Invalid password. Please try again.', 'error')
-flash('Username does not exist. Please register first.', 'error')
+This role information is then stored in local storage for frontend access control:
+```csharp
+await LocalStorage.SetItemAsync("authToken", token);
+await LocalStorage.SetItemAsync("employeeId", employeeId);
+await LocalStorage.SetItemAsync("userRole", role);
 ```
 
-Why use flash messages?
-They provide real-time feedback to users, improving the user experience.
+### Resource Access Patterns
+**Manager Access:**
+- Full access to user management functionality
+- Can view and modify all users' information
+- Access to the management dashboard
+- Can create tasks for any user
 
-## Describe how access to resources are handled between different actors. Provide code examples. 
-
-### Access to resources is managed through the PeopleController using HTTP endpoints. The controller handles CRUD operations for `Person` entities.
-
-Authentication ensures that only legitimate users can access resources. The Login endpoint generates a JWT for authenticaed users. This token is then used to verify the user's identity for further requests.
-First, it verifies the user's credentials. Then, it issues a signed JWT containing claims such as the role and expiration date. Lastly, the client includes this token in the `Authoriazation` header of further requests. 
-
-
-    [HttpPost("login")]
-    public async Task<IActionResult> Login([FromBody] PersonBase person)
-    {
-        var foundPerson = await _personService.GetPersonById(person.EmployeeId);
-
-        if (foundPerson == null || !foundPerson.IsActive)
-        {
-            return Unauthorized("Invalid employee ID or inactive account.");
-        }
-
-        bool isPasswordValid = BCrypt.Net.BCrypt.Verify(person.Password, foundPerson.Password);
-        if (!isPasswordValid)
-        {
-            return Unauthorized("Invalid password.");
-        }
-
-        // Generate JWT
-        var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
-        var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
-
-        var token = new JwtSecurityToken(
-            _config["Jwt:Issuer"],
-            _config["Jwt:Issuer"],
-            null,
-            expires: DateTime.Now.AddMinutes(120),
-            signingCredentials: credentials);
-
-        var jwtToken = new JwtSecurityTokenHandler().WriteToken(token);
-
-        // Add Role to the response
-        var response = new { Token = jwtToken, EmployeeId = foundPerson.EmployeeId, Role = foundPerson.Role };
-
-        return Ok(response);
-
-
-
-### Endpoint-Specific Validation
-Validation ensures resources are accessed and manipulated correctly: 
-Check resource existence: Verify if the resource (a person) exists before processing. 
-Mismatch prevention: Ensure the resource identifiers in the URL match the request body 
-
-
-    [HttpPut("{employeeId}")]
-    public async Task<IActionResult> UpdatePerson(string employeeId, [FromBody] PersonBase updatedPerson)
-    {
-        try
-        {
-            if (employeeId != updatedPerson.EmployeeId)
-            {
-                return BadRequest("Employee ID mismatch.");
-            }
-
-            var result = await _personService.UpdatePerson(employeeId, updatedPerson);
-
-            if (result == "Success")
-            {
-                return Ok("Person successfully updated.");
-            }
-            else
-            {
-                return NotFound(result);
-            }
-        }
-
-
-
+**Employee Access:**
+- Limited to viewing and modifying their own information
+- Can only create and manage their own tasks
+- No access to user management features
 
 ### Secure Sensitive Data 
 Passwords are hashed using BCrypt, and the service verifies the hash during login. 
 
-        bool isPasswordValid = BCrypt.Net.BCrypt.Verify(person.Password, foundPerson.Password);
-        if (!isPasswordValid)
-        {
-            return Unauthorized("Invalid password.");
-        }
+```csharp
+bool isPasswordValid = BCrypt.Net.BCrypt.Verify(person.Password, foundPerson.Password);
+if (!isPasswordValid)
+{
+    return Unauthorized("Invalid password.");
+}
+```
 
