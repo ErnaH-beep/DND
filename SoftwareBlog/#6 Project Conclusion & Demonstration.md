@@ -12,7 +12,7 @@
 ## Summary of Project Outcome
 
 
-## Updated Requirements List## Updated Requirements List
+## Updated Requirements List
 
 
 | Requirement                                               | Status        |
