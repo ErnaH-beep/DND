@@ -47,8 +47,8 @@ The application fullfills its objectives. The application is a prototype and fur
 
 ## Delimitation
 Throughout the project potential chaanges and improvements were discovered:
-**TaskID**
-**Registration**
+- **TaskID**
+- **Registration**
 
 ## Final Project Conclusion
 All in all, the project turned out successfully. The initial requirements were met, with the exception of the registration functionality for the users. Additionally, a calendar, a kanban board, and visuals on the dashboard have been implemented to enhance planning, tracking, and overall user experience.
