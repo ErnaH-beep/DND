@@ -2,16 +2,11 @@
 
 ## Table of Contents
 1. [Final Development Update](#final-development-update)
-   - [Backend Infrastructure](##backend-infrastructure)
-   - [Frontend Development](#frontend-development)
-   - [User Management](#user-management)
-   - [Task Management](#task-management)
-   - [Data Access](#data-access)
-   - [Final Testing and Optimization](#final-testing-and-optimization)
 2. [Project Outcome](#project-outcome)
 3. [Updated Requirements List](#status-requirements-list)
 4. [Short Demonstration Video](#demonstration-video)
-5. [Final Project Conclusion](#final-project-conclusion)
+5. [Delimitation](#delimitation)
+6. [Final Project Conclusion](#final-project-conclusion)
 
 
 
