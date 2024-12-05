@@ -20,42 +20,42 @@
 ## Final Development Update
 
 1. **Backend Infrastructure**
-- Implemented robust task management system with CRUD operations
-- Established secure user authentication and authorization
-- Developed role-based access control system for different user types
-- Created API endpoints for task operations and user management
+   - Implemented robust task management system with CRUD operations
+   - Established secure user authentication and authorization
+   - Developed role-based access control system for different user types
+   - Created API endpoints for task operations and user management
 
 2. **Frontend Development**
-- Designed and implemented an intuitive user interface
-- Created interactive dashboard with visual data representations
-- Developed a functional Kanban board for task visualization
-- Implemented calendar view for better task planning
-- Added filtering and sorting capabilities for task management
+   - Designed and implemented an intuitive user interface
+   - Created interactive dashboard with visual data representations
+   - Developed a functional Kanban board for task visualization
+   - Implemented calendar view for better task planning
+   - Added filtering and sorting capabilities for task management
 
 3. **User Management**
-- Implemented user authentication system with login/logout functionality
-- Developed role-based permissions (Employee and Manager roles)
-- Created user role management system for Managers
-- Set up access control mechanisms for task visibility and editing
+   - Implemented user authentication system with login/logout functionality
+   - Developed role-based permissions (Employee and Manager roles)
+   - Created user role management system for Managers
+   - Set up access control mechanisms for task visibility and editing
 
 4. **Task Management**
-- Implemented comprehensive task CRUD operations
-- Added task status tracking functionality
-- Created task filtering and sorting capabilities
-- Developed task assignment and ownership features
-- Implemented task completion marking system
+   - Implemented comprehensive task CRUD operations
+   - Added task status tracking functionality
+   - Created task filtering and sorting capabilities
+   - Developed task assignment and ownership features
+   - Implemented task completion marking system
 
 5. **Data Access**
-- Established secure data access patterns based on user roles
-- Implemented data visibility controls
-- Created efficient data retrieval methods for tasks and user information
-- Set up proper data management for task updates and modifications
+   - Established secure data access patterns based on user roles
+   - Implemented data visibility controls
+   - Created efficient data retrieval methods for tasks and user information
+   - Set up proper data management for task updates and modifications
 
 6. **Final Testing and Optimization**
-- Conducted thorough testing of all implemented features
-- Optimized application performance
-- Fixed identified bugs and issues
-- Ensured smooth user experience across all functionalities
+   - Conducted thorough testing of all implemented features
+   - Optimized application performance
+   - Fixed identified bugs and issues
+   - Ensured smooth user experience across all functionalities
 
 ## Project Outcome
 The application fullfills its objectives. The application is a prototype and further development is required for it to sucessfully act as a task management tool to assist teams and businesses. Key features that are currently implemented:
