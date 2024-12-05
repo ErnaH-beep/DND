@@ -9,7 +9,7 @@
 ## Final Development Update
 
 
-## Summary of Project Outcome
+## Project Outcome
 
 
 ## Updated Requirements List
@@ -26,3 +26,8 @@
 | Users roles will be applied to each account             | ✅ Implemented |
 | User role "Employee" will only be able to edit and interact with their own tasks, while they can view other users tasks. | ✅ Implemented |
 | User role "Manager" can edit and interract with all tasks and can change the role of other users. | ✅ Implemented |
+
+## Demonstration to Video
+[Watch the demonstration on YouTube](LINK HERE)
+
+## Final Project Conclusion
