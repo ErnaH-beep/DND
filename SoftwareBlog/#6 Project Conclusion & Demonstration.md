@@ -2,7 +2,7 @@
 
 ## Table of Contents
 1. [Final Development Update](#final-development-update)
-   - [Backend Infrastructure](#backend-infrastructure)
+   - [Backend Infrastructure](##backend-infrastructure)
    - [Frontend Development](#frontend-development)
    - [User Management](#user-management)
    - [Task Management](#task-management)
