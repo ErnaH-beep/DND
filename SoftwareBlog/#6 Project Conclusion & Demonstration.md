@@ -24,7 +24,8 @@
 The application fullfills its objectives and can sucessfully act as a task management tool to assist teams and businesses. It will improve effficiency and clarity. 
 - **Time & Task Management**: The application offers task planning to every user, which greatly assists in keeping an overview of the project.
 - **User Roles**: The use of user roles asisst the team or company to assign tasks and effecciently control the project and tasks within. This is made access control and data management techniques.
-- **Visuals**: Visuals, as on the dashboard and the kanban board, makes the 
+- **Visuals**: Visuals, as on the dashboard and the kanban board, makes the application more intuitive for the users. Furthermore it assist in getting a quick data based overview of the project status.
+
 
 ## Status Requirements List
 
