@@ -1,12 +1,15 @@
 .dropdown .user-profile-btn {
-    border: none; /* Remove border */
-    display: flex; /* Center content */
-    justify-content: center;
+    border: none;
+    display: flex;
     align-items: center;
+    gap: 0.5rem;
     cursor: pointer;
-    transition: 0.3s ease; /* Smooth color transition */
-    color: rgb(29, 32, 36);  /* Light gray text instead of black */
+    transition: 0.3s ease;
+    color: #fff;
     margin: 0;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    width: 100%;
 }
 
 .btn-link {
@@ -21,11 +24,34 @@
 
 /* Change color on hover */
 .user-profile-btn:hover {
-    color: rgb(55, 60, 66);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.user-profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-decoration: none;
+}
+
+.user-profile-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.user-profile-role {
+    font-size: 0.7rem;
+    font-weight: 400;
+    text-decoration: none;
+    margin: 0;
+    line-height: 1.2;
 }
 
 .user-profile-btn svg {
-    color: inherit; /* Inherit color from button */
+    color: inherit;
 }
 
 .dropdown-menu .action-button {

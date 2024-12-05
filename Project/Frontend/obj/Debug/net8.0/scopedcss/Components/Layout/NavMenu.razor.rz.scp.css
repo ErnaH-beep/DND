@@ -43,6 +43,7 @@
     font-size: 1rem;
     font-weight: 600;
     padding-bottom: 0.5rem;
+    height: 84vh;
 }
 
     .nav-item:first-of-type[b-ftcrkoicqg] {
@@ -77,7 +78,9 @@
 }
 
 .nav-scrollable[b-ftcrkoicqg] {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .navbar-toggler:checked ~ .nav-scrollable[b-ftcrkoicqg] {
@@ -104,4 +107,9 @@
         height: calc(100vh - 3.5rem);
         overflow-y: auto;
     }
+}
+
+.header-sign[b-ftcrkoicqg] {
+    margin-top: auto;
+    padding: 1rem;
 }
