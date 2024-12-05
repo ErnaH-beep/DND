@@ -78,10 +78,11 @@ They provide real-time feedback to users, improving the user experience.
 ## Describe how access to resources are handled between different actors. Provide code examples. 
 
 ### Access to resoruces is managed through the PeopleController using HTTP endpoints. The controller handles CRUD operations for "Person" entities.
+
 Authentication ensures that only leigimate users can access resources. The Login endpoint generates a JWT for authenticaed users. This token is then used to verify the user's identity for further requests.
 First, it verifies the user's credentials. Then it issues a signed JWT containing claims such as the role and expiration date. Lastly, the client includes this token in the ´Authoriazation´ header of further requests. 
 
-´´´
+
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] PersonBase person)
     {
@@ -116,14 +117,14 @@ First, it verifies the user's credentials. Then it issues a signed JWT containin
 
         return Ok(response);
 
-´´´
+
 
 ### Endpoint-Specific Validation
 Validation ensures resources are accessed and manipulated correctly: 
 Check resource existence: Verify if the resource (a person) exists before processing. 
 Mismatch prevention: Ensure the resource identifiers in the URL match the request body 
 
-´´´
+
     [HttpPut("{employeeId}")]
     public async Task<IActionResult> UpdatePerson(string employeeId, [FromBody] PersonBase updatedPerson)
     {
@@ -146,15 +147,15 @@ Mismatch prevention: Ensure the resource identifiers in the URL match the reques
             }
         }
 
-´´´
+
 
 
 ###Secure Sensitive Data 
 Passwords are hashed using BCrypt, and the service verifies the hash during login. 
-´´´
+
         bool isPasswordValid = BCrypt.Net.BCrypt.Verify(person.Password, foundPerson.Password);
         if (!isPasswordValid)
         {
             return Unauthorized("Invalid password.");
         }
-´´´
+
