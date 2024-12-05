@@ -1,6 +1,17 @@
 # Final Development Report
 
 ## Table of Contents
+1. [Final Development Update](#final-development-update)
+   - [Backend Infrastructure](#backend-infrastructure)
+   - [Frontend Development](#frontend-development)
+   - [User Management](#user-management)
+   - [Waste Report Analytics](#waste-report-analytics)
+   - [Data Access](#data-access)
+   - [Sustainability Goals](#sustainability-goals)
+2. [Project Outcome](#project-outcome)
+3. [Updated Requirements List](#status-requirements-list)
+4. [Short Demonstration Video](#demonstration-video)
+5. [Conclusion](#final-project-conclusion)
 
 
 
@@ -10,9 +21,10 @@
 
 
 ## Project Outcome
+The application fullfills its objectives and can sucessfully act as a task management tool to assist teams and businesses. It will improve effficiency and clarity. 
 
 
-## Updated Requirements List
+## Status Requirements List
 
 
 | Requirement                                               | Status        |
