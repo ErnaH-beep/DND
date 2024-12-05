@@ -12,9 +12,7 @@ header {
     position: fixed;
     width: 100%;
     z-index: 2;
-    /* Add these properties for centering and max-width */
     max-width: 1400px;
-    /* Equivalent to Tailwind's 5xl */
     left: 50%;
     transform: translateX(-50%);
 }
@@ -41,16 +39,17 @@ a {
 .buttons {
     display: flex;
     gap: 15px;
+    border-radius: 4px;
 }
 
 .login-btn,
 .signup-btn {
     padding: 10px 20px;
-    border: 1px solid #000;
-    color: #000;
+    background-color: rgb(29, 32, 36) !important;
+    color: white;
     text-decoration: none;
     background-color: transparent;
-    border-radius: 20px;
+    border-radius: 4px;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
@@ -59,22 +58,22 @@ a {
 
 .login-btn-2 {
     padding: 10px 20px;
-    border: 1px solid black;
-    color: black;
+    background-color: rgb(29, 32, 36) !important;
+    color: white;
     text-decoration: none;
     background-color: transparent;
-    border-radius: 20px;
+    border-radius: 4px;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
     transition: .3s ease;
+    width: fit-content;
 }
 
 .login-btn:hover,
 .login-btn-2:hover,
 .signup-btn:hover {
-    background-color: lightgray;
-    border-color: black;
+    background-color: rgb(39, 43, 48) !important;
 }
 
 .hero {

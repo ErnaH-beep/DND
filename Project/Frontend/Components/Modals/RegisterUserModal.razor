@@ -80,7 +80,7 @@
                 message = "User registered successfully!";
                 messageClass = "alert-success";
                 await registerUserModal.HideAsync();
-                await OnSuccess.InvokeAsync(); // Notify parent component
+                await OnSuccess.InvokeAsync();
             }
             else
             {

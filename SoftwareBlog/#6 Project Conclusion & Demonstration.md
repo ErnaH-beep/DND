@@ -80,7 +80,7 @@ The application fullfills its objectives. The application is a prototype and fur
 | User role "Manager" can edit and interract with all tasks and can change the role of other users. | ✅ Implemented |
 
 ## Demonstration to Video
-[Watch the demonstration on YouTube](LINK HERE)
+[Watch the demo of the application here](https://www.youtube.com/watch?v=6_F6r3z9-Dg)
 
 ## Delimitation
 Throughout the project, several potential improvements and limitations were identified:
