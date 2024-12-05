@@ -11,7 +11,7 @@
 2. [Project Outcome](#project-outcome)
 3. [Updated Requirements List](#status-requirements-list)
 4. [Short Demonstration Video](#demonstration-video)
-5. [Conclusion](#final-project-conclusion)
+5. [Final Project Conclusion](#final-project-conclusion)
 
 
 
@@ -22,7 +22,8 @@
 
 ## Project Outcome
 The application fullfills its objectives and can sucessfully act as a task management tool to assist teams and businesses. It will improve effficiency and clarity. 
-
+- **Time and Task Management**: The application offers task planning to every user, which greatly assists in keeping an overview of the project.
+- ****:
 
 ## Status Requirements List
 
